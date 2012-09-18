@@ -14,18 +14,34 @@
  # => http://wdgp.nl/#conditions
 
 $module[] = array(
-					'testformodule',
-					'this is the description',
-					array('functionnameone','functionnametwo')
+					'update',
+					'update module',
+					array(null, null) //hidden only system callable functions
 				 );
 
-function testformodule_functionnameone($parameters)
+function update_url   () 
 {
-	return true;
+	return "http://u.wdgp.nl/product/OSMS/{version}";
 }
 
-function testformodule_functionnametwo($parameters)
+function update_check ()
 {
-	return false;
+	return false; //No Updates ;)
 }
+
+function update_get ()
+{
+	return true; //Updated....
+}
+
+function update_diff()
+{
+	return null;
+}
+
+function update_backup($file)
+{
+	// must implent
+}
+
 ?>

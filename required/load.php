@@ -13,6 +13,6 @@
  # => Rules: 
  # => http://wdgp.nl/#conditions
 
-
+include "./config/configuration.php";
 
 ?>
