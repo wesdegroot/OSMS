@@ -14,4 +14,25 @@
  # => http://wdgp.nl/#conditions
 
 /// MUST BE MADE :)
+
+class superclass
+{
+	public function loadPage($page)
+	{
+		include './pages/' . $page . '.php';
+	}
+	public function loadStyle($some)
+	{
+		// EMPTY
+	}
+	public function getConfig($some)
+	{
+		// EMPTY
+	}
+	public function finish()
+	{
+		echo "<hr>Footer";
+	}
+}
+
 ?>

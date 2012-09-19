@@ -13,5 +13,6 @@
  # => Rules: 
  # => http://wdgp.nl/#conditions
 
-
 ?>
+
+THIS IS THE TESTING FROM THE TEST :)

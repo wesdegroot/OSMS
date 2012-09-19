@@ -15,9 +15,6 @@
 
 require './data/required/load.php';
 
-echo 'testing testing testing testing';
-
-/*
 $site = new superclass();
 $site->loadPage('home'); //NEEDS TO GET AJAX CALLS!!!
 
@@ -25,6 +22,5 @@ if ( !isset($_GET['ajax']) )
 	$site->loadStyle($site->getConfig('template'));
 
 $site->finish();
-*/
 
 ?>
