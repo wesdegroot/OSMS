@@ -13,18 +13,14 @@
  # => Rules: 
  # => http://wdgp.nl/#conditions
 
-require './data/required/load.php';
+require "./data/config/configuration.php";
 
-echo 'testing testing testing testing';
+// check system files
+require "./modules/agenda/module.php";
+require "./modules/update/module.php";
+require "./modules/cloud/module.php";
+require "./data/require/templateparser.php";
 
-/*
-$site = new superclass();
-$site->loadPage('home'); //NEEDS TO GET AJAX CALLS!!!
-
-if ( !isset($_GET['ajax']) )
-	$site->loadStyle($site->getConfig('template'));
-
-$site->finish();
-*/
-
+// load ("enabled" modules)
+# MUST BUILT IN TO THE SYSYEM...
 ?>
