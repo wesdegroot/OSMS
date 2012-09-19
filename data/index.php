@@ -13,18 +13,8 @@
  # => Rules: 
  # => http://wdgp.nl/#conditions
 
-require 'required/load.php';
-
-echo 'testing testing testing testing';
-
-/*
-$site = new superclass();
-$site->loadPage('home'); //NEEDS TO GET AJAX CALLS!!!
-
-if ( !isset($_GET['ajax']) )
-	$site->loadStyle($site->getConfig('template'));
-
-$site->finish();
-*/
+#Forbidden files, please go back!
+header("location: /");
+exit;
 
 ?>
