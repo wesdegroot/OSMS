@@ -46,7 +46,7 @@ function agendaWhoIsFreeAndNearby($date, $extra)
 	// Who is free and nearby
 }
 
-function agendaWriteWeek($who, extra)
+function agendaWriteWeek($who, $extra)
 {
 	// agenda write "weekstaat", by $who and $extra is an array mo,di,wo,do,vr,za,zo (free, sick, working, working on)
 }

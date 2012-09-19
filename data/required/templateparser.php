@@ -13,14 +13,5 @@
  # => Rules: 
  # => http://wdgp.nl/#conditions
 
-require "./data/config/configuration.php";
-
-// check system files
-require "./modules/agenda/module.php";
-require "./modules/update/module.php";
-require "./modules/cloud/module.php";
-require "./data/required/templateparser.php";
-
-// load ("enabled" modules)
-# MUST BUILT IN TO THE SYSYEM...
+/// MUST BE MADE :)
 ?>

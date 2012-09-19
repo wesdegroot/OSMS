@@ -37,14 +37,14 @@ function cloud_get_config_parameter ( $configuration )
 	return $status;
 }
 
-function cloud_login ( $user, pass )
+function cloud_login ( $user, $pass )
 {
 	// if login is OK Then
 	saveConfig('config/cloud.php', 'cloud', 'sessionid', $sessionid);
 	saveConfig('config/cloud.php', 'cloud', 'expires',   $expiredat);
 }
 
-function cloud_register ( $user, pass, $email )
+function cloud_register ( $user, $pass, $email )
 {
 	return false;
 }
@@ -52,7 +52,7 @@ function cloud_register ( $user, pass, $email )
 function cloud_enabled ()
 {
 	global $configuration;
-	if (readConfig('cloud','enabled'])) // Check if cloud is turned on.
+	if (readConfig('cloud','enabled')) // Check if cloud is turned on.
 	{
 		return true;
 	}
