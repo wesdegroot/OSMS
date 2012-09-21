@@ -13,26 +13,32 @@
  # => Rules: 
  # => http://wdgp.nl/#conditions
 
-/// MUST BE MADE :)
+// DeveloperTools
 
-class superclass
+if ( defined ( 'DevToolsInstalled' ) )
 {
-	public function loadPage($page)
+	// Here All the DevTools :)
+	function _apiConnect ( $apiKey )
 	{
-		include './data/pages/' . $page . '.php';
+		// Connect To the API ;)
+		// a.wdgp.nl?
 	}
-	public function loadStyle($some)
-	{
-		// EMPTY
-	}
-	public function getConfig($some)
-	{
-		// EMPTY
-	}
-	public function finish()
-	{
-		echo "<hr>Footer";
-	}
-}
 
+	function _devToolsCompress ( $fileToCompress )
+	{
+		// General PackFunction
+	}	
+
+	function _apiUpload($what, $name, $raw, $creator, $extra)
+	{
+		// if all things are ok, then upload it :P
+	}
+
+	function _selectTheme () 
+	{
+		//Theme Selector	
+	}
+
+
+}
 ?>
