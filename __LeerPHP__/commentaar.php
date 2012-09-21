@@ -13,27 +13,16 @@
  # => Rules: 
  # => http://wdgp.nl/#conditions
 
-/// abcdefgXFFF
+// commentaar c++ style
 
-require './data/required/load.php';
+# commentaar :)
 
-$site = new superclass();
-$site->loadPage('home'); //NEEDS TO GET AJAX CALLS!!!
-
-if ( !isset($_GET['ajax']) )
-	{
-		if (!$site->isMobile()) 
-		{
-			$site->loadStyle($site->getConfig('template'));
-		}
-		else
-		{
-			$site->loadStyle("mobile");
-		}
-	}
-	
-	$site->loadStyle($site->getConfig('template'));
-
-$site->finish();
+/*
+ meerlijnige
+ commentaar
+ is
+ ook 
+ mogelijk
+*/
 
 ?>
