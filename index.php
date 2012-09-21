@@ -19,7 +19,6 @@ $site = new superclass();
 $site->loadPage('home'); //NEEDS TO GET AJAX CALLS!!!
 
 if ( !isset($_GET['ajax']) )
-<<<<<<< HEAD
 	{
 		if (!$site->isMobile()) 
 		{
@@ -31,10 +30,8 @@ if ( !isset($_GET['ajax']) )
 		}
 	}
 	
-=======
 	$site->loadStyle($site->getConfig('template'));
 
->>>>>>> 88a3e0be92e8df772fcaf896f093f5e769e358e3
 $site->finish();
 
 ?>
