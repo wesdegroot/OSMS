@@ -1,4 +1,51 @@
 // AJAX.JS
+// This Code is (c) WDG.P ; Free To use if opensource; non comerical;
+// and useable by WDG.P => and all the projects of it.
+
+function createRequest() {
+  try {
+    request = new XMLHttpRequest();
+  } catch (tryMS) {
+    try {
+      request = new ActiveXObject("Msxml2.XMLHTTP");
+    } catch (otherMS) {
+      try {
+        request = new ActiveXObject("Microsoft.XMLHTTP");
+      } catch (failed) {
+        request = null;
+      }
+    }
+  }
+  return request;
+}
+
+
+function processAjax(url,tar,title) {
+  request = createRequest();
+  if(request == null) {
+    alert("Unable to Create Request");
+    return;
+  }
+  var nocache = new Date();
+  // Add the nocache to the url to make sure it gets updated page...
+  url = url + '&stopIEcache='+nocache;
+  request.open("GET",url,true);
+  request.onreadystatechange = function() {stateChanged(tar,title)};
+  request.send(null);
+}
+
+
+function stateChanged(field,title) {
+  if(request.readyState == 4) {
+    if(request.status == 200) {
+      detailDiv = document.getElementById(field);
+      detailDiv.innerHTML = request.responseText;
+      document.getElementById('pagename').innerHTML=title;
+      window.location.hash=title;
+    }
+  }
+}
+
 
 function LoadAPage(page,main) {
  LoadAjaxPage(page,main);
@@ -14,18 +61,9 @@ function LoadAjaxPage(page,main) {
   var pagz = page.split("&");
   var pagz = pagz[0];
 
-    document.getElementById('pagename').innerHTML        = '<img src=\'http://beta.wdgss.nl/template/admin/images/loading.gif\'>Loading Page "' + pagz + '" Please Wait...';
-
-// NEEDS TO STRIP JQUERY AND MAKE A OWN AJAX THING!!!    
-$.ajax({
-  url: main + "index.php?ajaxload=" + page,
-  cache: false,
-  success: function(html){
-    document.getElementById('wdgss_main_cont').innerHTML=html;
-    document.getElementById('pagename').innerHTML=pagz;
-    window.location.hash=page;
-  }
-});
+  
+  document.getElementById('pagename').innerHTML = '<img src=\'images/loading.gif\'>Loading Page "' + pagz + '" Please Wait...';
+  processAjax ( main + "index.php?ajaxload=" + page, 'main_cont', pagz);
   
   return false;
  }
