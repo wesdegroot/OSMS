@@ -31,8 +31,6 @@ if ( !isset($_GET['ajax']) )
 		}
 	}
 	
-	$site->loadStyle($site->getConfig('template'));
-
 $site->finish();
 
 ?>
