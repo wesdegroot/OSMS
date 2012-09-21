@@ -1,4 +1,4 @@
-<?php
+﻿<?php
  #New Php File
  # Created With  Macbook Pro, 15", Late 2011
  # Mac OS X Mountain Lion
@@ -9,7 +9,7 @@
  # OPENSOURCE
  # => CC BY-SA 
  # => => That means you may use, edit, improve the code, as long you share it also; you MUST leave the names of 'WDG.P'
- #
+ #51+652+62
  # => Rules: 
  # => http://wdgp.nl/#conditions
 
