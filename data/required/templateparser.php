@@ -13,11 +13,7 @@
  # => Rules: 
  # => http://wdgp.nl/#conditions
 
-<<<<<<< HEAD
-/// MUST BE MADE :)..
-=======
 /// MUST BE MADE :)
->>>>>>> 88a3e0be92e8df772fcaf896f093f5e769e358e3
 
 class superclass
 {
@@ -33,15 +29,12 @@ class superclass
 	{
 		// EMPTY
 	}
-<<<<<<< HEAD
 
 	public function isMobile()
 	{
 		return false; // no mobile dedection yet.
 	}
 	
-=======
->>>>>>> 88a3e0be92e8df772fcaf896f093f5e769e358e3
 	public function finish()
 	{
 		echo "<hr>Footer";
