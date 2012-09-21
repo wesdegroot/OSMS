@@ -1,3 +1,4 @@
+
 <?php
  #New Php File
  # Created With  Macbook Pro, 15", Late 2011
@@ -12,8 +13,6 @@
  #
  # => Rules: 
  # => http://wdgp.nl/#conditions
-
-/// abcdefgXFFF
 
 require './data/required/load.php';
 
