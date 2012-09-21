@@ -18,15 +18,15 @@ function siteExists ($what, $file)
 	switch ( $what )
 	{
 		case 'Theme':
-			return (file_exists('./themes/'.$file.'.theme'));		
+			return (file_exists('./themes/'.$file.'/theme.php'));		
 		break;
 		
 		case 'Module':
-			return (file_exists('./modules/'.$file.'.module'));		
+			return (file_exists('./modules/'.$file.'/module.php'));		
 		break;
 		
 		case 'Language':
-			return (file_exists('./data/languages/'.$file.'.language'));
+			return (file_exists('./data/languages/'.$file.'.php'));
 		break;
 		
 		case 'Page':
