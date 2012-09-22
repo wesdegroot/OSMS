@@ -20,6 +20,8 @@ require "./modules/agenda/module.php";
 require "./modules/update/module.php";
 require "./modules/cloud/module.php";
 require "./data/required/templateparser.php";
+require "./data/required/corefunctions.php";
+require "./data/required/sitefunctions.php";
 
 // load ("enabled" modules)
 # MUST BUILT IN TO THE SYSYEM...
