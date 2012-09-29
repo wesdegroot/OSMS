@@ -17,29 +17,47 @@
 
 class superclass
 {
+	var $returning = "test";
+
 	public function loadPage($page)
 	{
-		include './data/pages/' . $page . '.php';
+		global $config, $cfg;
+		if ( file_exists ('./data/pages/' . $page . '.php') )
+			{
+				ob_start();
+				include './data/pages/' . $page . '.php';
+				$page = ob_get_contents();
+				ob_end_clean();
+				return $page;
+			}
+		else
+			{
+				return '404';
+			}
 	}
 
-	public function loadStyle($some)
+	public function loadStyle($some, $page)
 	{
-		$file = './data/themes/' . $some . '/theme.php';
+		global $config, $cfg;
+		$file = './themes/' . $some . '/theme.php';
 		if ( file_exists ( $file ) ) 
 		{
-			$file = file_get_contents('./data/themes/' . $some . '/theme.php');
 			ob_start();
-			$ob = eval(" HELLO */".$file."/* WORLD ");
+			include $file;
 			$ob = ob_get_contents();
 			ob_end_clean();
 			$file = $ob;
-			return $this->parseFile($file);
+		    $this->parseFile($file, $page);
+		}
+		else
+		{
+			$this->parseFile('!Template '.$some.' Does not exists!', $page);
 		}
 	}
 
-	public function parseFile($fileContents)
+	public function parseFile($fileContents, $page)
 	{
-		return $fileContents;
+		$this->returning = $fileContents . $page; //layout will not be handled yet, sorry.
 	}
 
 	public function getConfig($some)
@@ -63,7 +81,7 @@ class superclass
 	
 	public function finish()
 	{
-		echo "<hr>Footer";
+		echo $this->returning . "<hr>Footer";
 	}
 }
 

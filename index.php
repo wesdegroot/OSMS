@@ -17,18 +17,30 @@
 require './data/required/load.php';
 
 $site = new superclass();
-$site->loadPage('home'); //NEEDS TO GET AJAX CALLS!!!
 
+if ( !isset($_GET['page']) )
+	$_GET['page'] = "home";
+	
 if ( !isset($_GET['ajax']) )
 	{
 		if (!$site->isMobile()) 
 		{
-			$site->loadStyle($site->getConfig('template'));
+			$site->loadStyle(
+								$site->getConfig('template'),
+								$site->loadPage($_GET['page']) //NEEDS TO GET AJAX CALLS!!!
+						    );
 		}
 		else
 		{
-			$site->loadStyle("mobile");
-		}
+			$site->loadStyle(
+								"mobile",
+								$site->loadPage($_GET['page']) //NEEDS TO GET AJAX CALLS!!!
+							);
+		} ///temporary fix... frustrated... :@
+	}
+else
+	{
+		$site->loadPage($_GET['page']); //AJAX CALL!!!
 	}
 	
 $site->finish();

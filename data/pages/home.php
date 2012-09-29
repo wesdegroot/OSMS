@@ -16,3 +16,6 @@
 ?>
 
 THIS IS THE TESTING FROM THE TEST :)
+
+Testing things:: <a href='?page=lol'>Page: Lol.</a> || <a href='#' onclick="return loadAjaxPage('testAjaxPage');">AJAX PAGE LOAD!!!</a>
+<div id='content'>AJAX CONTENT???</a>
