@@ -1,6 +1,13 @@
 .DS_file
+
 .DS_info
+
 .DS_Store
+
 thumbs.db
+
 desktop.ini
+
 DS_Store
+
+data/required/.DS_Store

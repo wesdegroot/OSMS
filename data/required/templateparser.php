@@ -21,13 +21,31 @@ class superclass
 	{
 		include './data/pages/' . $page . '.php';
 	}
+
 	public function loadStyle($some)
 	{
-		// EMPTY
+		$file = './data/themes/' . $some . '/theme.php';
+		if ( file_exists ( $file ) ) 
+		{
+			$file = file_get_contents('./data/themes/' . $some . '/theme.php');
+			ob_start();
+			$ob = eval(" HELLO */".$file."/* WORLD ");
+			$ob = ob_get_contents();
+			ob_end_clean();
+			$file = $ob;
+			return $this->parseFile($file);
+		}
 	}
+
+	public function parseFile($fileContents)
+	{
+		return $fileContents;
+	}
+
 	public function getConfig($some)
 	{
-		// EMPTY
+		global $cfg;
+		return $cfg->getValue('site','theme');
 	}
 
 	public function isMobile()
