@@ -13,7 +13,8 @@
  # => Rules: 
  # => http://wdgp.nl/#conditions
 
-require "./data/config/configuration.php";
+//require "./data/config/configuration.php";
+require "./data/required/iniFunctions.php";
 
 // check system files
 require "./modules/agenda/module.php";
