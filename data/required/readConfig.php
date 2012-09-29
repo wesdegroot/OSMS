@@ -13,7 +13,7 @@
  # => Rules: 
  # => http://wdgp.nl/#conditions
 
-$cfg              = new iniParser("../files/config/config.ini");
+$cfg              = new iniParser("./data/config/configuration.ini");
 $config           = array();
 $conf['database'] = $cfg->get("database");
 $conf['site']     = $cfg->get("site");
