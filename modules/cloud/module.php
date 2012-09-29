@@ -40,8 +40,8 @@ function cloud_get_config_parameter ( $configuration )
 function cloud_login ( $user, $pass )
 {
 	// if login is OK Then
-	saveConfig('config/cloud.php', 'cloud', 'sessionid', $sessionid);
-	saveConfig('config/cloud.php', 'cloud', 'expires',   $expiredat);
+	saveConfig('files/config/cloud.php', 'cloud', 'sessionid', $sessionid);
+	saveConfig('files/config/cloud.php', 'cloud', 'expires',   $expiredat);
 }
 
 function cloud_register ( $user, $pass, $email )
