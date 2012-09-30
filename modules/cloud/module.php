@@ -21,14 +21,14 @@ $module[] = array(
 
 function cloud_save_config ( $configuration = null )
 {
-	$cfg = new iniParser("./data/config/cloud.ini");
-	return $cfg->save();
+	//SAVE TO CLOUD
+	return false;
 }
 
-function cloud_get_config ( $parameter )
+function cloud_get_config ( $file = 'configuration.ini', $parameter = null )
 {
-	$cfg = new iniParser("./data/config/cloud.ini");
-	return $cfg->get('cloud',$parameter);
+	//GET FROM CLOUD
+	return false;
 }
 
 function cloud_get_config_parameter ( $parameter )
