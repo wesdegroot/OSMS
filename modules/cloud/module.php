@@ -19,29 +19,36 @@ $module[] = array(
 					array(null, null) //hidden only system callable functions
 				 );
 
-function cloud_save_config ( $configuration )
+function cloud_save_config ( $configuration = null )
 {
-	$status = false;
-	return $status;
+	$cfg = new iniParser("./data/config/cloud.ini");
+	return $cfg->save();
 }
 
-function cloud_get_config ( $date )
+function cloud_get_config ( $parameter )
 {
-	$status = false;
-	return $status;
+	$cfg = new iniParser("./data/config/cloud.ini");
+	return $cfg->get('cloud',$parameter);
 }
 
-function cloud_get_config_parameter ( $configuration )
+function cloud_get_config_parameter ( $parameter )
 {
-	$status = false;
-	return $status;
+	$cfg = new iniParser("./data/config/cloud.ini");
+	return $cfg->get('cloud',$parameter);
 }
 
 function cloud_login ( $user, $pass )
 {
 	// if login is OK Then
-	saveConfig('files/config/cloud.php', 'cloud', 'sessionid', $sessionid);
-	saveConfig('files/config/cloud.php', 'cloud', 'expires',   $expiredat);
+//	saveConfig('files/config/cloud.php', 'cloud', 'sessionid', $sessionid);
+//	saveConfig('files/config/cloud.php', 'cloud', 'expires',   $expiredat);
+	$cfg = new iniParser("./data/config/cloud.ini");
+	$cfg->setValue('cloud','username', $user);
+	$cfg->setValue('cloud','password', $pass);
+	$cfg->setValue('cloud','session', $session);
+	$cfg->setValue('cloud','expires', $expires);
+	$cfg->setValue('cloud','enabled', '1');
+	$cfg->save();
 }
 
 function cloud_register ( $user, $pass, $email )
@@ -51,8 +58,9 @@ function cloud_register ( $user, $pass, $email )
 
 function cloud_enabled ()
 {
-	global $configuration;
-	if (readConfig('cloud','enabled')) // Check if cloud is turned on.
+	global $config;
+	$cfg = new iniParser("./data/config/cloud.ini");
+	if ($cfg->get('cloud','enabled')) // Check if cloud is turned on.
 	{
 		return true;
 	}
