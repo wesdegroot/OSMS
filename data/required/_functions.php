@@ -22,16 +22,40 @@ if ( defined ( 'DevToolsInstalled' ) )
 	{
 		// Connect To the API ;)
 		// a.wdgp.nl?
+		// check if key is ok ;)
+		return false;
 	}
 
-	function _devToolsCompress ( $fileToCompress )
+	function _devToolsDecompress ( $fileToDecompress )
 	{
 		// General PackFunction
+		return gzdecode($fileToDecompress);
 	}	
 
-	function _apiUpload($what, $name, $raw, $creator, $extra)
+	function _devToolsCompress ( $fileToCompress, $lvl = 9 )
+	{
+		// General PackFunction
+		return gzencode($fileToCompress, $lvl);
+	}
+
+	function _devToolsEncode ( $files )
+	{
+		return ascii2hex($files,null,"\\x");
+	}
+
+	function _devToolsDecode ( $files )
+	{
+		return hex2ascii($files);
+	}
+
+	function _apiUpload($what, $name, $raw, $creator, $extra, $apiKey='Required:ApiKey:True')
 	{
 		// if all things are ok, then upload it :P
+		// OPEN HTTP Connection And POST (UPLOAD IT)
+		if ( _apiConnect($apiKey) ) #maybe i hold this check, maybe not
+		{ //double check ;)... and down to the server also an check..
+			
+		}
 	}
 
 	function _selectTheme () 
@@ -39,6 +63,29 @@ if ( defined ( 'DevToolsInstalled' ) )
 		//Theme Selector	
 	}
 
+
+	function ascii2hex($ascii,$af=" ",$bef="\\x") 
+	{
+  		$hex = '';
+  		for ($i = 0; $i < strlen($ascii); $i++)
+  			{
+    			$byte = strtoupper(dechex(ord($ascii{$i})));
+    			$byte = str_repeat('0', 2 - strlen($byte)).$byte;
+    			$hex .= $bef . $byte . $af;
+  			}
+  		return $hex;
+	}
+
+	function hex2ascii($hex)
+	{
+		$ascii='';
+		$hex=str_replace(" ", "", $hex);
+		for($i=0; $i<strlen($hex); $i=$i+2)
+			{
+				$ascii .= chr(hexdec(substr($hex, $i, 2)));
+			}
+		return($ascii);
+	}
 
 }
 ?>
