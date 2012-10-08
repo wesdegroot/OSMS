@@ -1,6 +1,6 @@
-var spe = 500;
+var spe = 500; //speed.
 var na  = document.all.tags("blink");
-var swi = 1;
+var swi = 1; //do not change :)
 
 KnipperTekst();
 

@@ -39,7 +39,7 @@ class iniParser {
 
 	function getSection( $key )
 	{
-		return $this->_iniParsedArray[$key];
+		return @$this->_iniParsedArray[$key];
 		$this->save();
 	}
 

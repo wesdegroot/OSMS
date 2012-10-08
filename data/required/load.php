@@ -18,6 +18,7 @@ require "./data/required/iniFunctions.php";
 require "./data/required/readConfig.php";
 
 // check system files
+require "./data/required/loadModules.php";
 require "./modules/agenda/module.php";
 require "./modules/update/module.php";
 require "./modules/cloud/module.php";

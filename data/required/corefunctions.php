@@ -13,5 +13,5 @@
  # => Rules: 
  # => http://wdgp.nl/#conditions
 
-
+//must implent. but now h'day @ France.
 ?>

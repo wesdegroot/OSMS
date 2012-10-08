@@ -14,6 +14,9 @@
  # => http://wdgp.nl/#conditions
 
 // DeveloperTools
+// Please normal users don't use this!
+// We do not give support on this file!!!
+// We answer no questions about this code/ or the api/ update code.
 
 if ( defined ( 'DevToolsInstalled' ) )
 {

@@ -38,4 +38,96 @@ function siteExists ($what, $file)
 		break;		
 	}	
 }
+
+function fgc ( $fgc )
+{
+	return file_get_contents ( $fgc );
+}
+
+function lang (
+					 $str,
+					 $p01=false, 
+				     $p02=false, 
+				     $p03=false, 
+				     $p04=false, 
+				     $p05=false, 
+				     $p06=false, 
+				     $p07=false, 
+				     $p08=false, 
+				     $p09=false, 
+				     $p10=false, 
+				     $p11=false, 
+				     $p12=false, 
+				     $p13=false, 
+				     $p14=false, 
+				     $p15=false
+			   )
+{
+	global $lang;
+
+	if ( $p15 != false )
+	{
+		return sprint_f($lang[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07, $p08, $p09, $p10, $p11, $p12, $p13, $p14, $p15);
+	}
+	elseif ( $p14 != false )
+	{
+		return sprint_f($lang[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07, $p08, $p09, $p10, $p11, $p12, $p13, $p14);
+	}
+	elseif ( $p13 != false )
+	{
+		return sprint_f($lang[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07, $p08, $p09, $p10, $p11, $p12, $p13);
+	}
+	elseif ( $p12 != false )
+	{
+		return sprint_f($lang[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07, $p08, $p09, $p10, $p11, $p12);
+	}
+	elseif ( $p11 != false )
+	{
+		return sprint_f($lang[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07, $p08, $p09, $p10, $p11);
+	}
+	elseif ( $p10 != false )
+	{
+		return sprint_f($lang[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07, $p08, $p09, $p10);
+	}
+	elseif ( $p09 != false )
+	{
+		return sprint_f($lang[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07, $p08, $p09);
+	}
+	elseif ( $p08 != false )
+	{
+		return sprint_f($lang[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07, $p08);
+	}
+	elseif ( $p07 != false )
+	{
+		return sprint_f($lang[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07);
+	}
+	elseif ( $p06 != false )
+	{
+		return sprint_f($lang[$str], $p01, $p02, $p03, $p04, $p05, $p06);
+	}
+	elseif ( $p05 != false )
+	{
+		return sprint_f($lang[$str], $p01, $p02, $p03, $p04, $p05);
+	}
+	elseif ( $p04 != false )
+	{
+		return sprint_f($lang[$str], $p01, $p02, $p03, $p04);
+	}
+	elseif ( $p03 != false )
+	{
+		return sprint_f($lang[$str], $p01, $p02, $p03);
+	}
+	elseif ( $p02 != false )
+	{
+		return sprint_f($lang[$str], $p01, $p02);
+	}
+	elseif ( $p01 != false )
+	{
+		return sprint_f($lang[$str], $p01);
+	}
+	else
+	{
+		return sprint_r($lang[$str]);
+	}
+}
 ?>

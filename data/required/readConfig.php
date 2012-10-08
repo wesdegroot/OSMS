@@ -20,5 +20,6 @@ $conf['site']     = $cfg->get("site");
 $conf['system']   = $cfg->get("system");
 $conf['setup']    = $cfg->get("setup");
 $conf['cloud']    = $cfg->get("cloud");
+$conf['modules']  = $cfg->get("autoload");
 
 ?>

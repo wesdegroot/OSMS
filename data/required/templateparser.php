@@ -30,6 +30,14 @@ class superclass
 				ob_end_clean();
 				return $page;
 			}
+		elseif ( file_exists ('./modules/' . $page . '/module.php') )
+			{
+				ob_start();
+				include './modules/' . $page . '/module.php';
+				$page = ob_get_contents();
+				ob_end_clean();
+				return $page;
+			}
 		else
 			{
 				return '404';

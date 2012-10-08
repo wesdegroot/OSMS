@@ -1,5 +1,7 @@
-
 <?php
+error_reporting(E_ALL);
+@ini_set('display_errors',1);
+
  #New Php File
  # Created With  Macbook Pro, 15", Late 2011
  # Mac OS X Mountain Lion
@@ -45,4 +47,4 @@ else
 	
 $site->finish();
 
-?>
+?>WORKS?

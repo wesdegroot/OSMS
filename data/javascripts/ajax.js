@@ -1,6 +1,12 @@
 // AJAX.JS
 // This Code is (c) WDG.P ; Free To use if opensource; non comerical;
 // and useable by WDG.P => and all the projects of it.
+// WDG.P => http://www.wdgp.nl - WesDeGroot Projects (http://www.wesdegrootprojects.nl)
+// WDG.P is the new name of WesDeGroot Projects.
+////////////////
+// - A.R.R. - //
+// - C.I.P. _ //
+////////////////
 
 function createRequest() {
   try {
