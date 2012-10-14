@@ -15,7 +15,7 @@
 
 
 ?>
-<script type="text/javascript" src="http://www.ohloh.net/p/606087/widgets/project_partner_badge.js"></script>
+<iframe src='https://www.ohloh.net/p/606087/widgets/project_partner_badge.html' scrolling='no' style='height: 50px; width: 210px; border: none;'></iframe>
 <br>
 <script type="text/javascript" src="http://www.ohloh.net/p/606087/widgets/project_languages.js"></script>
 <br>
