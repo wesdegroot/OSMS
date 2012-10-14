@@ -23,13 +23,13 @@ $site = new superclass();
 if ( !isset($_GET['page']) )
 	$_GET['page'] = "home";
 	
-if ( !isset($_GET['ajax']) )
+if ( !isset($_GET['ajaxload']) )
 	{
 		if (!$site->isMobile()) 
 		{
 			$site->loadStyle(
 								$site->getConfig('template'),
-								$site->loadPage($_GET['page']) //NEEDS TO GET AJAX CALLS!!!
+								null /*$site->loadPage($_GET['page'])*/ //NEEDS TO GET AJAX CALLS!!!
 						    );
 		}
 		else
@@ -39,12 +39,10 @@ if ( !isset($_GET['ajax']) )
 								$site->loadPage($_GET['page']) //NEEDS TO GET AJAX CALLS!!!
 							);
 		} ///temporary fix... frustrated... :@
+		$site->finish( (!isset($_GET['ajaxload']))?true:false );
 	}
 else
 	{
-		$site->loadPage($_GET['page']); //AJAX CALL!!!
+		echo $site->loadPage($_GET['page']); //AJAX CALL!!!
 	}
-	
-$site->finish();
-
-?>WORKS?
+?>

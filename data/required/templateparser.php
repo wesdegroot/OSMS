@@ -14,6 +14,34 @@
  # => http://wdgp.nl/#conditions
 
 /// MUST BE MADE :)
+function menu($pa1,$pa2,$pa3)
+{
+ global $url;
+ 
+ $menu=array();
+ $menu[] = array('Home', 'home');
+ $menu[] = array('Big Page', 'loadtime');
+ $menu[] = array('Ajax Page', 'ajax');
+ $menu[] = array('Test Page', 'test');
+
+for($i=0; $i<11; $i++)
+{
+ if($i < 10)
+  $i= 0 . $i;
+
+ if($i < 100)
+  $i= 00 . $i;
+
+ $menu[] = array('item ' . $i, 'item'.$i);
+}
+
+ for($i=0; $i<sizeof($menu); $i++)
+ {
+ 	// HERE COMES MENU THING
+ 	$ajaxstr = "onclick=\"LoadAjaxPage('http://home.wdgss.nl/projecten/OSMS/{$menu[$i][1]}','http://home.wdgss.nl/projecten/OSMS/');";
+ 	echo $pa1 . "#\"" . $ajaxstr . $pa2 . $menu[$i][0] . $pa3;
+ }	
+}
 
 class superclass
 {
@@ -40,7 +68,9 @@ class superclass
 			}
 		else
 			{
-				return '404';
+				return "<h1>Sorry, But the page \"{$page}\" does not exists!</h1>If this error comes to much send the following data to the developers<br>
+				Page: {$page}<br>
+				Site: {$_SERVER['HTTP_HOST']}";
 			}
 	}
 
@@ -87,9 +117,9 @@ class superclass
 		}
 	}
 	
-	public function finish()
-	{
-		echo $this->returning . "<hr>Footer";
+	public function finish($footer)
+	{	
+		echo $this->returning . (($footer && function_exists('_themeFooter')) ? _themeFooter() : null) ;
 	}
 }
 

@@ -13,12 +13,10 @@
  # => Rules: 
  # => http://wdgp.nl/#conditions
 
-?>
-THIS IS THE HOME PAGE
-<BR><BR>
-<a href='#' onclick="LoadAjaxPage('http://home.wdgss.nl/projecten/OSMS/ajax','http://home.wdgss.nl/projecten/OSMS/');">TEST AJAX</a>
-<BR>
-<?php echo nl2br("Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pulvinar libero a sem tristique laoreet. Donec placerat dictum vehicula. Morbi id magna eu lacus euismod facilisis id eu massa. Sed porttitor luctus risus eu feugiat. Pellentesque faucibus faucibus lacus eu vestibulum. Nulla bibendum turpis sit amet elit posuere vitae vulputate dui ultrices. Donec blandit, neque vehicula aliquet pretium, risus sem lacinia odio, sed venenatis lorem sapien id elit.
+sleep(5);
+echo "<h1>HIGH LOAD PAGE</h1>Simulated<hr>";
+
+ echo nl2br("Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pulvinar libero a sem tristique laoreet. Donec placerat dictum vehicula. Morbi id magna eu lacus euismod facilisis id eu massa. Sed porttitor luctus risus eu feugiat. Pellentesque faucibus faucibus lacus eu vestibulum. Nulla bibendum turpis sit amet elit posuere vitae vulputate dui ultrices. Donec blandit, neque vehicula aliquet pretium, risus sem lacinia odio, sed venenatis lorem sapien id elit.
 
 Praesent id quam dui, non condimentum nisl. Mauris sed libero sit amet arcu blandit lacinia. Curabitur fringilla consectetur nibh a faucibus. Nulla viverra nibh in nisl mattis et egestas arcu ornare. In non ante tristique metus pellentesque volutpat egestas vitae ligula. Praesent rhoncus dictum diam id pellentesque. Sed non blandit libero. Nam lobortis ipsum hendrerit dolor rhoncus adipiscing. Aenean bibendum faucibus blandit. Nulla ultrices posuere blandit. Vivamus ac eros ligula. Praesent sed massa velit, ac imperdiet quam. Mauris faucibus mauris id tortor elementum vel rhoncus mi mattis. Vestibulum quis metus at magna consectetur fermentum eget vitae felis. Mauris tristique, elit eu ornare rutrum, mi tortor posuere elit, eget iaculis lacus lacus et justo.
 

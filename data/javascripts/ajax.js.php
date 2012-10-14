@@ -7,6 +7,17 @@
 // - A.R.R. - //
 // - C.I.P. _ //
 ////////////////
+<?php
+include "../required/iniFunctions.php";
+$cfg = new iniParser("../config/configuration.ini");
+$url = $cfg->get("site","url");
+?>
+
+function debug(logerror) { 
+        if (typeof console != "undefined") { 
+            console.log(logerror); 
+        } 
+} 
 
 function createRequest() {
   try {
@@ -35,6 +46,7 @@ function processAjax(url,tar,title) {
   var nocache = new Date();
   // Add the nocache to the url to make sure it gets updated page...
   url = url + '&stopIEcache='+nocache;
+  debug(url);
   request.open("GET",url,true);
   request.onreadystatechange = function() {stateChanged(tar,title)};
   request.send(null);
@@ -45,6 +57,7 @@ function stateChanged(field,title) {
   if(request.readyState == 4) {
     if(request.status == 200) {
       detailDiv = document.getElementById(field);
+      debug("Page:" + request.responseText);
       detailDiv.innerHTML = request.responseText;
       document.getElementById('pagename').innerHTML=title;
       window.location.hash=title;
@@ -68,8 +81,10 @@ function LoadAjaxPage(page,main) {
   var pagz = pagz[0];
 
   
-  document.getElementById('pagename').innerHTML = '<img src=\'images/loading.gif\'>Loading Page "' + pagz + '" Please Wait...';
-  processAjax ( main + "index.php?ajaxload=" + page, 'main_cont', pagz);
+  document.getElementById('pagename').innerHTML = '<img src=\'<?php echo $url; ?>/data/images/loading.gif\'>&nbsp;Loading Page "' + pagz + '" Please Wait...';
+  document.getElementById('main_cont').innerHTML = '<BR><BR><BR><center><h1><center>Loading Page "' + pagz + '" Please Wait...</center></h1><br><img src=\'<?php echo $url; ?>/data/images/ajax_loader.gif\'></center>';
+  
+  processAjax ( "<?php echo $url; ?>/" + "index.php?ajaxload&page=" + page, 'main_cont', pagz);
   
   return false;
  }
@@ -83,4 +98,4 @@ function LoadAjaxPage(page,main) {
 var hash=document.location.hash.split("#");
 var hash=hash[1]; // means pagename
 if (typeof(hash) == "undefined") { var hash='home'; }
-setTimeout("LoadAjaxPage('http://beta.wdgss.nl/page/"+hash+"','http://beta.wdgss.nl/');", 100)
+setTimeout("LoadAjaxPage('http://home.wdgss.nl/projecten/OSMS/"+hash+"','http://home.wdgss.nl/projecten/OSMS/');", 100)
