@@ -17,6 +17,6 @@
 ?>
 <iframe src='https://www.ohloh.net/p/606087/widgets/project_partner_badge.html' scrolling='no' style='height: 50px; width: 210px; border: none;'></iframe>
 <br>
-<script type="text/javascript" src="http://www.ohloh.net/p/606087/widgets/project_languages.js"></script>
+<iframe src='https://www.ohloh.net/p/606087/widgets/project_languages.html' scrolling='no' style='height: 200px; width: 350px; border: none;'></iframe>
 <br>
 <script type="text/javascript" src="http://www.ohloh.net/p/606087/widgets/project_factoids_stats.js"></script>
