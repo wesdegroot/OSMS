@@ -24,7 +24,8 @@ function menu($pa1,$pa2,$pa3)
  $menu[] = array('Ajax Page', 'ajax');
  $menu[] = array('Test Page', 'test');
 
-for($i=0; $i<11; $i++)
+/*
+for($i=0; $i<101; $i++)
 {
  if($i < 10)
   $i= 0 . $i;
@@ -34,6 +35,7 @@ for($i=0; $i<11; $i++)
 
  $menu[] = array('item ' . $i, 'item'.$i);
 }
+*/
 
  for($i=0; $i<sizeof($menu); $i++)
  {

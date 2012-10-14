@@ -61,7 +61,8 @@ function stateChanged(field,title) {
       detailDiv.innerHTML = request.responseText;
       document.getElementById('pagename').innerHTML=title;
       window.location.hash=title;
-    }
+      document.title = '<?php global $sfg; echo $cfg->getValue('site','name'); ?>: ' + title;
+      }
   }
 }
 
@@ -82,8 +83,9 @@ function LoadAjaxPage(page,main) {
 
   
   document.getElementById('pagename').innerHTML = '<img src=\'<?php echo $url; ?>/data/images/loading.gif\'>&nbsp;Loading Page "' + pagz + '" Please Wait...';
-  document.getElementById('main_cont').innerHTML = '<BR><BR><BR><center><h1><center>Loading Page "' + pagz + '" Please Wait...</center></h1><br><img src=\'<?php echo $url; ?>/data/images/ajax_loader.gif\'></center>';
-  
+  document.getElementById('main_cont').innerHTML = '<center><h1><center>Loading Page "' + pagz + '" Please Wait...</center></h1><br><img src=\'<?php echo $url; ?>/data/images/ajax_loader.gif\'></center>';
+  document.title = '[LOADING: ' + pagz + '] <?php global $sfg; echo $cfg->getValue('site','name'); ?>';
+
   processAjax ( "<?php echo $url; ?>/" + "index.php?ajaxload&page=" + page, 'main_cont', pagz);
   
   return false;
