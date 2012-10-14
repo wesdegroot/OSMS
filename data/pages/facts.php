@@ -13,14 +13,10 @@
  # => Rules: 
  # => http://wdgp.nl/#conditions
 
-$cfg              = new iniParser("./data/config/configuration.ini");
-$config           = array();
-$conf['database'] = $cfg->get("database");
-$conf['site']     = $cfg->get("site");
-$conf['system']   = $cfg->get("system");
-$conf['setup']    = $cfg->get("setup");
-$conf['cloud']    = $cfg->get("cloud");
-$conf['modules']  = $cfg->get("autoload");
-$conf['menu']     = $cfg->get("menu");
 
 ?>
+<script type="text/javascript" src="http://www.ohloh.net/p/606087/widgets/project_partner_badge.js"></script>
+<br>
+<script type="text/javascript" src="http://www.ohloh.net/p/606087/widgets/project_languages.js"></script>
+<br>
+<script type="text/javascript" src="http://www.ohloh.net/p/606087/widgets/project_factoids_stats.js"></script>

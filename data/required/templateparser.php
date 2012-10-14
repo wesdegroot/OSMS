@@ -16,13 +16,18 @@
 /// MUST BE MADE :)
 function menu($pa1,$pa2,$pa3)
 {
- global $url;
+ global $url,$conf;
  
  $menu=array();
- $menu[] = array('Home', 'home');
- $menu[] = array('Big Page', 'loadtime');
- $menu[] = array('Ajax Page', 'ajax');
- $menu[] = array('Test Page', 'test');
+
+if ( is_array ( $conf['menu'] ) )
+{
+	foreach($conf['menu'] as $title => $url)
+		{
+			$title = preg_replace("#_#", " ", $title);
+			$menu[] = array($title, $url);
+		}
+}
 
 /*
 for($i=0; $i<101; $i++)
