@@ -26,4 +26,6 @@ $language['language']    = 'Taal';
 $language['translator']  = 'Vertaler';
 $language['welcome']     = 'Welkom';
 */
+echo lang('_debug');
+
 ?>
