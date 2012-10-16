@@ -30,7 +30,20 @@ $info = array(
     "Translator" => lang('_translator')
     "Version"    => lang('_version')
 );
-        
+
+$valve  = "<table>";
+foreach($info as $title => $value)
+{
+    if ( $value == null )
+    {
+        $valve .= "</table><br><h3><center>" . lang($title) . "</center></h3><br><table>";
+    }
+    else
+    {
+        $valve .= "<tr><td>" . lang($title) . "</td><td>" . $value . "</td></tr>";
+    }
+}
+$valve .= "</table>";
 }
 
 ?>
