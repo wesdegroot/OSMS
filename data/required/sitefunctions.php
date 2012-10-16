@@ -85,63 +85,63 @@ function lang (
 
 	if ( $p15 != false )
 	{
-		return sprint_f($lang[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07, $p08, $p09, $p10, $p11, $p12, $p13, $p14, $p15);
+		return sprintf($lang[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07, $p08, $p09, $p10, $p11, $p12, $p13, $p14, $p15);
 	}
 	elseif ( $p14 != false )
 	{
-		return sprint_f($lang[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07, $p08, $p09, $p10, $p11, $p12, $p13, $p14);
+		return sprintf($lang[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07, $p08, $p09, $p10, $p11, $p12, $p13, $p14);
 	}
 	elseif ( $p13 != false )
 	{
-		return sprint_f($lang[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07, $p08, $p09, $p10, $p11, $p12, $p13);
+		return sprintf($lang[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07, $p08, $p09, $p10, $p11, $p12, $p13);
 	}
 	elseif ( $p12 != false )
 	{
-		return sprint_f($lang[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07, $p08, $p09, $p10, $p11, $p12);
+		return sprintf($lang[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07, $p08, $p09, $p10, $p11, $p12);
 	}
 	elseif ( $p11 != false )
 	{
-		return sprint_f($lang[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07, $p08, $p09, $p10, $p11);
+		return sprintf($lang[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07, $p08, $p09, $p10, $p11);
 	}
 	elseif ( $p10 != false )
 	{
-		return sprint_f($lang[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07, $p08, $p09, $p10);
+		return sprintf($lang[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07, $p08, $p09, $p10);
 	}
 	elseif ( $p09 != false )
 	{
-		return sprint_f($lang[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07, $p08, $p09);
+		return sprintf($lang[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07, $p08, $p09);
 	}
 	elseif ( $p08 != false )
 	{
-		return sprint_f($lang[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07, $p08);
+		return sprintf($lang[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07, $p08);
 	}
 	elseif ( $p07 != false )
 	{
-		return sprint_f($lang[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07);
+		return sprintf($lang[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07);
 	}
 	elseif ( $p06 != false )
 	{
-		return sprint_f($lang[$str], $p01, $p02, $p03, $p04, $p05, $p06);
+		return sprintf($lang[$str], $p01, $p02, $p03, $p04, $p05, $p06);
 	}
 	elseif ( $p05 != false )
 	{
-		return sprint_f($lang[$str], $p01, $p02, $p03, $p04, $p05);
+		return sprintf($lang[$str], $p01, $p02, $p03, $p04, $p05);
 	}
 	elseif ( $p04 != false )
 	{
-		return sprint_f($lang[$str], $p01, $p02, $p03, $p04);
+		return sprintf($lang[$str], $p01, $p02, $p03, $p04);
 	}
 	elseif ( $p03 != false )
 	{
-		return sprint_f($lang[$str], $p01, $p02, $p03);
+		return sprintf($lang[$str], $p01, $p02, $p03);
 	}
 	elseif ( $p02 != false )
 	{
-		return sprint_f($lang[$str], $p01, $p02);
+		return sprintf($lang[$str], $p01, $p02);
 	}
 	elseif ( $p01 != false )
 	{
-		return sprint_f($lang[$str], $p01);
+		return sprintf($lang[$str], $p01);
 	}
 	else
 	{
