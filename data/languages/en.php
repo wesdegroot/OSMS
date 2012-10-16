@@ -29,12 +29,12 @@ $language['language info'] = "Language Information";
 $language['translator(s)'] = "Translators";
 
 //menu
-$language['information']         = "Informatie";
-$language['interessting facts']  = "Intressante Weetjes";
-$language['test page']           = "test pagina";
-$language['ajax page']           = "ajax pagina";
-$language['big page']            = "Grote Pagina";
-$language['home']                = "Begin";
+$language['information']         = "Information";
+$language['interessting facts']  = "Interesting Facts";
+$language['test page']           = "Test Page";
+$language['ajax page']           = "Ajax Page";
+$language['big page']            = "Big Page";
+$language['home']                = "Home";
 
 //javascript
 $language['loading']                  = "Loading";
