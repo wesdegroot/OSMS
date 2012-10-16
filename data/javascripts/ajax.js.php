@@ -73,7 +73,7 @@ function createRequest() {
 function processAjax(url,tar,title) {
   request = createRequest();
   if(request == null) {
-    alert(lang("Unable to Create Request"));
+    alert(translate("Unable to Create Request"));
     return;
   }
   var nocache = new Date();
@@ -92,9 +92,9 @@ function stateChanged(field,title) {
       detailDiv = document.getElementById(field);
       debug("Page:" + request.responseText);
       detailDiv.innerHTML = request.responseText;
-      document.getElementById('pagename').innerHTML=lang(title);
+      document.getElementById('pagename').innerHTML=translate(title);
       window.location.hash=title;
-      document.title = '<?php global $sfg; echo $cfg->getValue('site','name'); ?>: ' + lang(title);
+      document.title = '<?php global $sfg; echo $cfg->getValue('site','name'); ?>: ' + translate(title);
       }
   }
 }
