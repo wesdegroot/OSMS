@@ -85,67 +85,67 @@ function lang (
 
 	if ( $p15 != false )
 	{
-		$retval = sprintf($language[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07, $p08, $p09, $p10, $p11, $p12, $p13, $p14, $p15);
+		$retval = sprintf(@$language[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07, $p08, $p09, $p10, $p11, $p12, $p13, $p14, $p15);
 	}
 	elseif ( $p14 != false )
 	{
-		$retval = sprintf($language[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07, $p08, $p09, $p10, $p11, $p12, $p13, $p14);
+		$retval = sprintf(@$language[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07, $p08, $p09, $p10, $p11, $p12, $p13, $p14);
 	}
 	elseif ( $p13 != false )
 	{
-		$retval = sprintf($language[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07, $p08, $p09, $p10, $p11, $p12, $p13);
+		$retval = sprintf(@$language[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07, $p08, $p09, $p10, $p11, $p12, $p13);
 	}
 	elseif ( $p12 != false )
 	{
-		$retval = sprintf($language[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07, $p08, $p09, $p10, $p11, $p12);
+		$retval = sprintf(@$language[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07, $p08, $p09, $p10, $p11, $p12);
 	}
 	elseif ( $p11 != false )
 	{
-		$retval = sprintf($language[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07, $p08, $p09, $p10, $p11);
+		$retval = sprintf(@$language[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07, $p08, $p09, $p10, $p11);
 	}
 	elseif ( $p10 != false )
 	{
-		$retval = sprintf($language[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07, $p08, $p09, $p10);
+		$retval = sprintf(@$language[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07, $p08, $p09, $p10);
 	}
 	elseif ( $p09 != false )
 	{
-		$retval = sprintf($language[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07, $p08, $p09);
+		$retval = sprintf(@$language[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07, $p08, $p09);
 	}
 	elseif ( $p08 != false )
 	{
-		$retval = sprintf($language[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07, $p08);
+		$retval = sprintf(@$language[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07, $p08);
 	}
 	elseif ( $p07 != false )
 	{
-		$retval = sprintf($language[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07);
+		$retval = sprintf(@$language[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07);
 	}
 	elseif ( $p06 != false )
 	{
-		$retval = sprintf($language[$str], $p01, $p02, $p03, $p04, $p05, $p06);
+		$retval = sprintf(@$language[$str], $p01, $p02, $p03, $p04, $p05, $p06);
 	}
 	elseif ( $p05 != false )
 	{
-		$retval = sprintf($language[$str], $p01, $p02, $p03, $p04, $p05);
+		$retval = sprintf(@$language[$str], $p01, $p02, $p03, $p04, $p05);
 	}
 	elseif ( $p04 != false )
 	{
-		$retval = sprintf($language[$str], $p01, $p02, $p03, $p04);
+		$retval = sprintf(@$language[$str], $p01, $p02, $p03, $p04);
 	}
 	elseif ( $p03 != false )
 	{
-		$retval = sprintf($language[$str], $p01, $p02, $p03);
+		$retval = sprintf(@$language[$str], $p01, $p02, $p03);
 	}
 	elseif ( $p02 != false )
 	{
-		$retval = sprintf($language[$str], $p01, $p02);
+		$retval = sprintf(@$language[$str], $p01, $p02);
 	}
 	elseif ( $p01 != false )
 	{
-		$retval = sprintf($language[$str], $p01);
+		$retval = sprintf(@$language[$str], $p01);
 	}
 	else
 	{
-		$retval = sprintf($language[$str]);
+		$retval = sprintf(@$language[$str]);
 	}
 
 	if ( $str == '_debug' ) {
