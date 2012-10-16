@@ -13,17 +13,24 @@
  # => Rules: 
  # => http://wdgp.nl/#conditions
 
-$language 				 = array();
-$language['_lang']		 = 'Nederlands (Dutch)';
-$language['_translator'] = 'Wesley De Groot/Edwin Huijboom';
-$language['_version']    = '0.0.1 r.1a';
-$language['_debug']      = true;
+$language 				   = array();
+$language['_lang']		   = 'Nederlands (Dutch)';
+$language['_translator']   = 'Wesley De Groot/Edwin Huijboom';
+$language['_version']      = '0.0.1 r.1a';
+$language['_debug']        = true;
 
-$language['language']    = 'Taal';
-$language['translator']  = 'Vertaler';
-$language['welcome']     = 'Welkom';
-$language['save']		 = 'opslaan';
+$language['system info']   = "Systeem Informatie";
+$language['version']       = "Versie";
+$language['websites']      = "Websites";
+$language['authors']       = "Auteurs";
+$language['language info'] = "Taal Informatie";
+$language['translator(s)'] = "Vertalers";
+
+$language['language']      = 'Taal';
+$language['translator']    = 'Vertaler';
+$language['welcome']       = 'Welkom';
+$language['save']		   = 'opslaan';
 
 // for later
-$language['...']		 = '...';
+$language['...']		   = '...';
 ?>
