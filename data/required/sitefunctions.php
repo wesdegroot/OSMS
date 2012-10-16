@@ -15,22 +15,6 @@
 
 define('language', 'nl');
 
-if(file_exists("./data/languages/" . language . '.php'))
-{
-    include "./data/languages/" . language . '.php';
-}else{ exit('MISSING TRANSLATION'); }
-
-if ( is_array ( $conf['modules'] ) )
-{
-foreach($conf['modules'] as $mod => $ule)
-{
-    if(file_exists("./modules/" . $mod . "/lang/" .language . ".php"))
-    {
-        include "./modules/" . $mod . "/lang/" .language . ".php";
-    }
-}
-}
-
 function siteExists ($what, $file)
 {
 	switch ( $what )
@@ -81,8 +65,24 @@ function lang (
 				     $p15 = false
 			   )
 {
-	global $lang;
+	global $lang,$conf;
 
+
+if(file_exists("./data/languages/" . language . '.php'))
+{
+    include "./data/languages/" . language . '.php';
+}else{ exit('MISSING TRANSLATION'); }
+
+if ( is_array ( $conf['modules'] ) )
+{
+foreach($conf['modules'] as $mod => $ule)
+{
+    if(file_exists("./modules/" . $mod . "/lang/" .language . ".php"))
+    {
+        include "./modules/" . $mod . "/lang/" .language . ".php";
+    }
+}
+}
 	if ( $p15 != false )
 	{
 		$retval = sprintf($lang[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07, $p08, $p09, $p10, $p11, $p12, $p13, $p14, $p15);
