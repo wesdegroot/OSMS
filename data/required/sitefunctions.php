@@ -31,6 +31,38 @@ foreach($conf['modules'] as $mod => $ule)
 }
 }
 
+function systemVersion () {
+$info = array(
+    "System Info"      => "-",
+    "Version"          => "0.0.0.1",
+    "Websites"         => "<a href='http://home.wdgss.nl/projecten/OSMS' target='_blank'>Demo Website</a>, <a href='http://home.wdgss.nl/projecten/OSMS' target='_blank'>Download Website</a>, <a href='https://github.com/wesdegroot/OSMS/issues' target='_blank'>Support Website</a>",
+    "Authors"          => "Wesley De Groot (WDG.P) [<a href='http://www.wdgp.nl' target='_blank'>homepage</a>]<br>
+                           Edwin Huijboom (WebVel) [<a href='http://www.webvel.nl' target='_blank'>homepage</a>]",
+    
+    "Language Info"    => "-",
+    "Language"         => lang('_lang'),
+    "Translator(s)"    => lang('_translator'),
+    "Version"          => lang('_version')
+);
+
+$valve  = "<table>";
+foreach($info as $title => $value)
+{
+    if ( $value == "-" )
+    {
+        $valve .= "</table><h3>" . lang($title) . "</h3><table>";
+    }
+    else
+    {
+        $valve .= "<tr><td>" . lang($title) . "</td><td>" . $value . "</td></tr>";
+    }
+    unset($title,$value);
+}
+$valve .= "</table>";
+
+return $valve;
+}
+
 function siteExists ($what, $file)
 {
 	switch ( $what )
