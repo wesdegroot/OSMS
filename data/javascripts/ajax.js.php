@@ -92,9 +92,9 @@ function stateChanged(field,title) {
       detailDiv = document.getElementById(field);
       debug("Page:" + request.responseText);
       detailDiv.innerHTML = request.responseText;
-      document.getElementById('pagename').innerHTML=title;
+      document.getElementById('pagename').innerHTML=lang(title);
       window.location.hash=title;
-      document.title = '<?php global $sfg; echo $cfg->getValue('site','name'); ?>: ' + title;
+      document.title = '<?php global $sfg; echo $cfg->getValue('site','name'); ?>: ' + lang(title);
       }
   }
 }
