@@ -29,6 +29,12 @@ $language['language info'] = "Language Information";
 $language['translator(s)'] = "Translators";
 
 //menu
+$language['information']         = "Informatie";
+$language['interessting facts']  = "Intressante Weetjes";
+$language['test page']           = "test pagina";
+$language['ajax page']           = "ajax pagina";
+$language['big page']            = "Grote Pagina";
+$language['home']                = "Begin";
 
 //javascript
 $language['loading']                  = "Loading";
