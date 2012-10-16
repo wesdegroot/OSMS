@@ -145,7 +145,7 @@ function lang (
 	}
 	else
 	{
-		return sprint_r($lang[$str]);
+		return sprintf($lang[$str]);
 	}
 }
 ?>
