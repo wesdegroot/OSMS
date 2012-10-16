@@ -114,7 +114,7 @@ echo menu("<li><a href=\"","\"><span class=\"l\"></span><span class=\"r\"></span
                     <div class="art-footer-r"></div>
                     <div class="art-footer-body">
                         <div class="art-footer-text">
-                            <a href='<?php echo $url; ?>../?setLang=nl'>NL</a> ||||||| <a href='<?php echo $url; ?>../?setLang=en'>EN</a>                            
+                            <a href='<?php echo $url; ?>/../?setLang=nl'>NL</a> ||||||| <a href='<?php echo $url; ?>/../?setLang=en'>EN</a>                            
                         </div>
                         <div class="cleared"></div>
                     </div>
