@@ -13,12 +13,12 @@
  # => Rules: 
  # => http://wdgp.nl/#conditions
 
-define('language', 'en');
+define('language', 'nl');
 
 if(file_exists("./data/languages/" . language . '.php'))
 {
     include "./data/languages/" . language . '.php';
-}
+}else{ exit('MISSING TRANSLATION'); }
 
 if ( is_array ( $conf['modules'] ) )
 {
@@ -63,89 +63,98 @@ function fgc ( $fgc )
 }
 
 function lang (
-					 $str,
-					 $p01=false, 
-				     $p02=false, 
-				     $p03=false, 
-				     $p04=false, 
-				     $p05=false, 
-				     $p06=false, 
-				     $p07=false, 
-				     $p08=false, 
-				     $p09=false, 
-				     $p10=false, 
-				     $p11=false, 
-				     $p12=false, 
-				     $p13=false, 
-				     $p14=false, 
-				     $p15=false
+					 $str = false,
+					 $p01 = false, 
+				     $p02 = false, 
+				     $p03 = false, 
+				     $p04 = false, 
+				     $p05 = false, 
+				     $p06 = false, 
+				     $p07 = false, 
+				     $p08 = false, 
+				     $p09 = false, 
+				     $p10 = false, 
+				     $p11 = false, 
+				     $p12 = false, 
+				     $p13 = false, 
+				     $p14 = false, 
+				     $p15 = false
 			   )
 {
 	global $lang;
 
 	if ( $p15 != false )
 	{
-		return sprintf($lang[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07, $p08, $p09, $p10, $p11, $p12, $p13, $p14, $p15);
+		$retval = sprintf($lang[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07, $p08, $p09, $p10, $p11, $p12, $p13, $p14, $p15);
 	}
 	elseif ( $p14 != false )
 	{
-		return sprintf($lang[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07, $p08, $p09, $p10, $p11, $p12, $p13, $p14);
+		$retval = sprintf($lang[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07, $p08, $p09, $p10, $p11, $p12, $p13, $p14);
 	}
 	elseif ( $p13 != false )
 	{
-		return sprintf($lang[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07, $p08, $p09, $p10, $p11, $p12, $p13);
+		$retval = sprintf($lang[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07, $p08, $p09, $p10, $p11, $p12, $p13);
 	}
 	elseif ( $p12 != false )
 	{
-		return sprintf($lang[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07, $p08, $p09, $p10, $p11, $p12);
+		$retval = sprintf($lang[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07, $p08, $p09, $p10, $p11, $p12);
 	}
 	elseif ( $p11 != false )
 	{
-		return sprintf($lang[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07, $p08, $p09, $p10, $p11);
+		$retval = sprintf($lang[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07, $p08, $p09, $p10, $p11);
 	}
 	elseif ( $p10 != false )
 	{
-		return sprintf($lang[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07, $p08, $p09, $p10);
+		$retval = sprintf($lang[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07, $p08, $p09, $p10);
 	}
 	elseif ( $p09 != false )
 	{
-		return sprintf($lang[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07, $p08, $p09);
+		$retval = sprintf($lang[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07, $p08, $p09);
 	}
 	elseif ( $p08 != false )
 	{
-		return sprintf($lang[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07, $p08);
+		$retval = sprintf($lang[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07, $p08);
 	}
 	elseif ( $p07 != false )
 	{
-		return sprintf($lang[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07);
+		$retval = sprintf($lang[$str], $p01, $p02, $p03, $p04, $p05, $p06, $p07);
 	}
 	elseif ( $p06 != false )
 	{
-		return sprintf($lang[$str], $p01, $p02, $p03, $p04, $p05, $p06);
+		$retval = sprintf($lang[$str], $p01, $p02, $p03, $p04, $p05, $p06);
 	}
 	elseif ( $p05 != false )
 	{
-		return sprintf($lang[$str], $p01, $p02, $p03, $p04, $p05);
+		$retval = sprintf($lang[$str], $p01, $p02, $p03, $p04, $p05);
 	}
 	elseif ( $p04 != false )
 	{
-		return sprintf($lang[$str], $p01, $p02, $p03, $p04);
+		$retval = sprintf($lang[$str], $p01, $p02, $p03, $p04);
 	}
 	elseif ( $p03 != false )
 	{
-		return sprintf($lang[$str], $p01, $p02, $p03);
+		$retval = sprintf($lang[$str], $p01, $p02, $p03);
 	}
 	elseif ( $p02 != false )
 	{
-		return sprintf($lang[$str], $p01, $p02);
+		$retval = sprintf($lang[$str], $p01, $p02);
 	}
 	elseif ( $p01 != false )
 	{
-		return sprintf($lang[$str], $p01);
+		$retval = sprintf($lang[$str], $p01);
 	}
 	else
 	{
-		return sprintf($lang[$str]);
+		$retval = sprintf($lang[$str]);
+	}
+
+	if ( !empty ( $retval ) )
+	{
+		return $retval;
+	}
+	else
+	{
+		return "Sorry Translation \"" . $str . "\" does not exists.";
 	}
 }
 ?>
