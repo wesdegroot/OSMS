@@ -148,13 +148,19 @@ function lang (
 		$retval = sprintf($lang[$str]);
 	}
 
-	if ( !empty ( $retval ) )
-	{
-		return $retval;
+	if ( $str == '_debug' ) {
+		var_dump($lang);
 	}
 	else
 	{
-		return "Sorry Translation \"" . $str . "\" does not exists.";
+		if ( !empty ( $retval ) )
+		{
+			return $retval;
+		}
+		else
+		{
+			return "Sorry Translation \"" . $str . "\" does not exists.";
+		}
 	}
 }
 ?>
