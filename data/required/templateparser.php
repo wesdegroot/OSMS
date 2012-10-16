@@ -25,7 +25,7 @@ if ( is_array ( $conf['menu'] ) )
 	foreach($conf['menu'] as $title => $url)
 		{
 			$title = preg_replace("#_#", " ", $title);
-			$menu[] = array($title, $url);
+			$menu[] = array(lang($title), $url);
 		}
 }
 

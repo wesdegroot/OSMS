@@ -25,6 +25,7 @@ $language['websites']      = "Websites";
 $language['authors']       = "Auteurs";
 $language['language info'] = "Taal Informatie";
 $language['translator(s)'] = "Vertalers";
+$language['information']   = "Informatie";
 
 $language['language']      = 'Taal';
 $language['translator']    = 'Vertaler';
