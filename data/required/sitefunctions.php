@@ -149,7 +149,7 @@ function lang (
 	}
 
 	if ( $str == '_debug' ) {
-		var_dump($lang);
+		var_dump($language);
 	}
 	else
 	{
@@ -159,7 +159,7 @@ function lang (
 		}
 		else
 		{
-			return "Sorry Translation \"" . $str . "\" does not exists.";
+			return $str;
 		}
 	}
 }

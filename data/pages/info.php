@@ -16,16 +16,21 @@
 ?>
 Some intresting information :) (about the system)<br><br>
 <?php
-echo lang('_lang');
-/*
-$language['_lang']      = 'Nederlands (Dutch)';
-$language['_translator'] = 'Wesley De Groot/Edwin Huijboom';
-$language['_version']    = '0.0.1 r.1a';
 
-$language['language']    = 'Taal';
-$language['translator']  = 'Vertaler';
-$language['welcome']     = 'Welkom';
-*/
-echo lang('_debug');
+function systemVersion () {
+$info = array(
+    "System"  => null,
+    "Version" => "0.0.0.1",
+    "Website" => "http://home.wdgss.nl/projecten/OSMS",
+    "Author"  => "Wesley De Groot (WDG.P) [homepage]
+                  Edwin Huijboom (WebVel) [homepage]",
+    
+    "Language"   => null,
+    "Language"   => lang('_lang'),
+    "Translator" => lang('_translator')
+    "Version"    => lang('_version')
+);
+        
+}
 
 ?>
