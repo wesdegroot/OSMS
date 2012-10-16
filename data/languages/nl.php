@@ -17,6 +17,7 @@ $language 				 = array();
 $language['_lang']		 = 'Nederlands (Dutch)';
 $language['_translator'] = 'Wesley De Groot/Edwin Huijboom';
 $language['_version']    = '0.0.1 r.1a';
+$language['_debug']      = true;
 
 $language['language']    = 'Taal';
 $language['translator']  = 'Vertaler';
