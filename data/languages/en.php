@@ -34,7 +34,7 @@ $language['translator(s)'] = "Translators";
 $language['loading']                  = "Loading";
 $language['please wait']              = "Please Wait";
 $language['page']                     = "page";
-$language['unable to create request'] = "Unable to create !";
+$language['unable to create request'] = "Unable to create AJAX request!";
 
 //others
 $language['language']      = 'Language';
