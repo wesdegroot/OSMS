@@ -35,6 +35,7 @@ $language['test page']           = "test pagina";
 $language['ajax page']           = "ajax pagina";
 $language['big page']            = "Grote Pagina";
 $language['home']                = "Begin";
+$language['info']                = "Informatie";
 
 //javascript
 $language['loading']                  = "laden";

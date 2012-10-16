@@ -2,7 +2,6 @@
 error_reporting(E_ALL);
 @ini_set('display_errors',1);
 @session_start();
-$_SESSION['lang'] = 'nl';
 
  #New Php File
  # Created With  Macbook Pro, 15", Late 2011
@@ -17,6 +16,28 @@ $_SESSION['lang'] = 'nl';
  #
  # => Rules: 
  # => http://wdgp.nl/#conditions
+
+if(isset($_GET['setLang']))
+{
+	$_SESSION['lang'] = $_GET['setLang'];
+	header("refresh: 0; url='.'");
+}
+
+if(!isset($_SESSION['lang']))
+{
+	if ($conf['system']['language'] == "auto")
+	{
+		//TOBUILD
+		$lang = "en";
+	}
+	else
+	{
+		$lang = $conf['system']['language'];
+	}
+
+	$_SESSION['lang'] = $lang;
+	header("refresh: 0;");
+}
 
 require './data/required/load.php';
 

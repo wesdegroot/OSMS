@@ -13,7 +13,7 @@
  # => Rules: 
  # => http://wdgp.nl/#conditions
 
-define('language', 'nl');
+define('language', @$_SESSION['lang']);
 
 if(file_exists("./data/languages/" . language . '.php'))
 {
