@@ -8,10 +8,43 @@
 // - C.I.P. _ //
 ////////////////
 <?php
+@session_start();
 include "../required/iniFunctions.php";
 $cfg = new iniParser("../config/configuration.ini");
 $url = $cfg->get("site","url");
+
+if ( isset ( $_SESSION['lang'] ) )
+{
+  include "../languages/" . $_SESSION['lang'] . ".php";  
+}
+else
+{
+  include "../languages/en.php";
+}
+?>function translate(id) {<?php
+$wo="\r\nvar myOrginal=new Array(";
+$ow="var myTranslation=new Array(";
+foreach($language as $va => $vo)
+{
+  $wo .= "\"" . $va . "\",";  
+  $ow .= "\"" . $vo . "\",";  
+}
+
+$wo .= "\"lol\");";
+$ow .= "\"lol\");";
+
+echo $wo . "\n\r" . $ow . "\r\n";
 ?>
+
+if (myOrginal.indexOf(id.toLowerCase()) != "-1")
+{
+  return myTranslation[myOrginal.indexOf(id.toLowerCase())];
+}
+else
+{
+  return id.toLowerCase();
+}
+}
 
 function debug(logerror) { 
         if (typeof console != "undefined") { 
@@ -40,7 +73,7 @@ function createRequest() {
 function processAjax(url,tar,title) {
   request = createRequest();
   if(request == null) {
-    alert("Unable to Create Request");
+    alert(lang("Unable to Create Request"));
     return;
   }
   var nocache = new Date();
@@ -82,9 +115,9 @@ function LoadAjaxPage(page,main) {
   var pagz = pagz[0];
 
   
-  document.getElementById('pagename').innerHTML = '<img src=\'<?php echo $url; ?>/data/images/loading.gif\'>&nbsp;Loading Page "' + pagz + '" Please Wait...';
-  document.getElementById('main_cont').innerHTML = '<center><h1><center>Loading Page "' + pagz + '" Please Wait...</center></h1><br><img src=\'<?php echo $url; ?>/data/images/ajax_loader.gif\'></center>';
-  document.title = '[LOADING: ' + pagz + '] <?php global $sfg; echo $cfg->getValue('site','name'); ?>';
+  document.getElementById('pagename').innerHTML = '<img src=\'<?php echo $url; ?>/data/images/loading.gif\'>&nbsp;' + translate('LOADING') + ' ' + translate('page') + ' "' + translate(pagz) + '" ' + translate('PLEASE WAIT') + '...';
+  document.getElementById('main_cont').innerHTML = '<center><h1><center>' + translate('LOADING') + ' ' + translate('PAGE') + ' "' + translate(pagz) + '" ' + translate('PLEASE WAIT') + '...</center></h1><br><img src=\'<?php echo $url; ?>/data/images/ajax_loader.gif\'></center>';
+  document.title = '[' + translate('LOADING') + ': ' + pagz + '] <?php global $sfg; echo $cfg->getValue('site','name'); ?>';
 
   processAjax ( "<?php echo $url; ?>/" + "index.php?ajaxload&page=" + page, 'main_cont', pagz);
   
@@ -100,4 +133,4 @@ function LoadAjaxPage(page,main) {
 var hash=document.location.hash.split("#");
 var hash=hash[1]; // means pagename
 if (typeof(hash) == "undefined") { var hash='home'; }
-setTimeout("LoadAjaxPage('http://home.wdgss.nl/projecten/OSMS/"+hash+"','http://home.wdgss.nl/projecten/OSMS/');", 100)
+setTimeout("LoadAjaxPage('http://home.wdgss.nl/projecten/OSMS/"+hash+"','http://home.wdgss.nl/projecten/OSMS/');", 500)

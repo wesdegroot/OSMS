@@ -36,6 +36,12 @@ $language['ajax page']           = "ajax pagina";
 $language['big page']            = "Grote Pagina";
 $language['home']                = "Begin";
 
+//javascript
+$language['loading']                  = "laden";
+$language['please wait']              = "een moment geduld aub";
+$language['page']                     = "pagina";
+$language['unable to create request'] = "kan geen ajax aanvraag sturen!";
+
 //others
 $language['language']      = 'Taal';
 $language['translator']    = 'Vertaler';
