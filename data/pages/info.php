@@ -19,13 +19,13 @@ Some intresting information :) (about the system)<br><br>
 
 function systemVersion () {
 $info = array(
-    "System"  => null,
-    "Version" => "0.0.0.1",
-    "Website" => "http://home.wdgss.nl/projecten/OSMS",
-    "Author"  => "Wesley De Groot (WDG.P) [homepage]
-                  Edwin Huijboom (WebVel) [homepage]",
+    "System Info"  => "-",
+    "Version"      => "0.0.0.1",
+    "Website"      => "http://home.wdgss.nl/projecten/OSMS",
+    "Author"       => "Wesley De Groot (WDG.P) [<a href='http://www.wdgp.nl' target='_blank'>homepage</a>]<br>
+                       Edwin Huijboom (WebVel) [<a href='http://www.webvel.nl' target='_blank'>homepage</a>]",
     
-    "Language"   => null,
+    "Language"   => "-",
     "Language"   => lang('_lang'),
     "Translator" => lang('_translator'),
     "Version"    => lang('_version')
@@ -34,7 +34,7 @@ $info = array(
 $valve  = "<table>";
 foreach($info as $title => $value)
 {
-    if ( $value == null )
+    if ( $value == "-" )
     {
         $valve .= "</table><br><h3><center>" . lang($title) . "</center></h3><br><table>";
     }
@@ -42,6 +42,7 @@ foreach($info as $title => $value)
     {
         $valve .= "<tr><td>" . lang($title) . "</td><td>" . $value . "</td></tr>";
     }
+    unset($title,$value);
 }
 $valve .= "</table>";
 
