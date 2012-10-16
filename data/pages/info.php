@@ -44,6 +44,9 @@ foreach($info as $title => $value)
     }
 }
 $valve .= "</table>";
+
+return $valve;
 }
 
+echo systemVersion();
 ?>
