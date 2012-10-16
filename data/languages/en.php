@@ -13,13 +13,14 @@
  # => Rules: 
  # => http://wdgp.nl/#conditions
 
+//translator
 $language 				   = array();
 $language['_lang']		   = 'English';
 $language['_translator']   = 'Wesley De Groot/Edwin Huijboom';
 $language['_version']      = '0.0.1 r.1a';
 $language['_debug']        = true;
 
-
+//sys info
 $language['system info']   = "System Information";
 $language['version']       = "Version";
 $language['websites']      = "Websites";
@@ -27,6 +28,15 @@ $language['authors']       = "Authors";
 $language['language info'] = "Language Information";
 $language['translator(s)'] = "Translators";
 
+//menu
+
+//javascript
+$language['loading']                  = "Loading";
+$language['please wait']              = "Please Wait";
+$language['page']                     = "page";
+$language['unable to create request'] = "Unable to create !";
+
+//others
 $language['language']      = 'Language';
 $language['translator']    = 'translator';
 $language['welcome']       = 'welcome';
