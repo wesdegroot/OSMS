@@ -27,7 +27,7 @@ $info = array(
     
     "Language"   => null,
     "Language"   => lang('_lang'),
-    "Translator" => lang('_translator')
+    "Translator" => lang('_translator'),
     "Version"    => lang('_version')
 );
 
