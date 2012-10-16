@@ -14,8 +14,7 @@
  # => http://wdgp.nl/#conditions
 
 // THIS IS A HTML FILE WITH PHP PARAMETERS
-global $url;
-$cfg = new iniParser("../config/configuration.ini");
+global $url,$cfg;
 $url = $cfg->get("site","url");
 
 ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -115,7 +114,7 @@ echo menu("<li><a href=\"","\"><span class=\"l\"></span><span class=\"r\"></span
                     <div class="art-footer-r"></div>
                     <div class="art-footer-body">
                         <div class="art-footer-text">
-                            <a href='<?php echo $url; ?>?setLang=nl'>NL</a> ||||||| <a href='<?php echo $url; ?>?setLang=en'>EN</a>                            
+                            <a href='<?php echo $url; ?>../?setLang=nl'>NL</a> ||||||| <a href='<?php echo $url; ?>../?setLang=en'>EN</a>                            
                         </div>
                         <div class="cleared"></div>
                     </div>
