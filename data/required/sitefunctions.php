@@ -81,7 +81,7 @@ function lang (
 				     $p15 = false
 			   )
 {
-	global $lang;
+	global $language;
 
 	if ( $p15 != false )
 	{
