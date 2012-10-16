@@ -13,6 +13,24 @@
  # => Rules: 
  # => http://wdgp.nl/#conditions
 
+define('language', 'en');
+
+if(file_exists("./data/languages/" . language . '.php'))
+{
+    include "./data/languages/" . language . '.php';
+}
+
+if ( is_array ( $conf['modules'] ) )
+{
+foreach($conf['modules'] as $mod => $ule)
+{
+    if(file_exists("./modules/" . $mod . "/lang/" .language . ".php"))
+    {
+        include "./modules/" . $mod . "/lang/" .language . ".php";
+    }
+}
+}
+
 function siteExists ($what, $file)
 {
 	switch ( $what )
