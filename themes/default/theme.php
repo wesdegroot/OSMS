@@ -68,7 +68,7 @@ $url = $cfg->get("site","url");
                      </td>
                      </tr>
                      </table>
-                     <div style="right: 15px; top: 30px; z-index: 1;position: fixed;"><a href='[url]?setLang=nl'><img src='[url]data/images/flags/nl.png' alt='nl'></a> | <a href='[url]?setLang=en'><img src='[url]data/images/flags/en.png'></a></div>
+                     <div style="right: 15px; top: 30px; z-index: 1;position: fixed;"><a href='[url]?setLang=nl'><img src='[url]data/images/flags/nl.png' alt='nl'></a>&nbsp;<a href='[url]?setLang=en'><img src='[url]data/images/flags/en.png'></a></div>
                     </div>
                 </div>
                 <div class="art-content-layout">
