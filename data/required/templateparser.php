@@ -44,9 +44,16 @@ for($i=0; $i<101; $i++)
 
  for($i=0; $i<sizeof($menu); $i++)
  {
- 	// HERE COMES MENU THING
- 	$ajaxstr = "onclick=\"LoadAjaxPage('http://home.wdgss.nl/projecten/OSMS/{$menu[$i][1]}','http://home.wdgss.nl/projecten/OSMS/');";
- 	echo $pa1 . "#\"" . $ajaxstr . $pa2 . $menu[$i][0] . $pa3;
+ 	if (!preg_match("#http\://#", $menu[$i][1]))
+ 	{
+	 	$ajaxstr = "onclick=\"LoadAjaxPage('http://home.wdgss.nl/projecten/OSMS/{$menu[$i][1]}','http://home.wdgss.nl/projecten/OSMS/');";
+ 		echo $pa1 . "#\"" . $ajaxstr . $pa2 . $menu[$i][0] . $pa3;
+ 	}
+ 	else
+ 	{
+ 		echo $pa1 . $menu[$i][1] . "\" target=\"_blank" . $pa2 . $menu[$i][0] . $pa3;
+ 	}
+ 	echo "\r\n";
  }	
 }
 
