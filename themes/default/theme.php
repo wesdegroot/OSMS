@@ -125,7 +125,7 @@ echo menu("<li><a href=\"","\"><span class=\"l\"></span><span class=\"r\"></span
                     <div class="art-footer-r"></div>
                     <div class="art-footer-body">
                         <div class="art-footer-text">
-                            FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER                            
+                            THIS IS A PRE BETA :)
                         </div>
                         <div class="cleared"></div>
                     </div>
@@ -134,7 +134,7 @@ echo menu("<li><a href=\"","\"><span class=\"l\"></span><span class=\"r\"></span
             </div>
         </div>
         <div class="cleared"></div>
-        <p class="art-page-footer">&copy; WDG.P &amp; Webvel 2012-<?php echo date("Y"); ?></p>
+        <p class="art-page-footer">&copy; <a href='http://www.wdgp.nl' target='_blank'>WDG.P</a> &amp; <a href='http://www.webvel.nl' target='blank'>Webvel</a> 2012-<?php echo date("Y"); ?></p>
     </div>
     
 </body>
