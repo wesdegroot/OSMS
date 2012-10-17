@@ -31,21 +31,31 @@ foreach($conf['modules'] as $mod => $ule)
 }
 }
 
-function systemVersion () {
+function systemVersion () { //Display All the system info :)
 	global $system, $conf;
+
+ob_start();
+$phpinfo = phpinfo();
+$phpinfo = ob_get_contents();
+ob_end_clean();
+
+
 $info = array(
     "System Info"         => "-",
     "Version"             => "{$system['version']} " . ( ($system['stable']==YES) ? 'Final' : 'Beta'),
     "Websites"            => "
-							  <table>
-							  <tr><td><img width='16px' height='16px' src='{$conf['site']['url']}data/icons/online.png' alt='demo'></td><td><a href='http://home.wdgss.nl/projecten/OSMS' target='_blank'>Demo Website</a></td></tr>
-    						  <tr><td><img src='{$conf['site']['url']}data/icons/get.gif' alt='download'></td><td><a href='http://home.wdgss.nl/projecten/OSMS' target='_blank'>Download Website</a><td></tr>
-							  <tr><td><img src='{$conf['site']['url']}data/icons/set.gif' alt='write issue'></td><td>
-    						  <a href='https://github.com/wesdegroot/OSMS/issues' target='_blank'>Support Website</a></td></tr>
-							  </table>    						
+							  		<a href='http://home.wdgss.nl/projecten/OSMS' target='_blank'>Demo Website</a>,<br>
+    						  		<a href='http://home.wdgss.nl/projecten/OSMS' target='_blank'>Download Website</a>,<br>
+    						  		<a href='https://github.com/wesdegroot/OSMS/issues' target='_blank'>Support Website</a>
+						
     						",
     "Authors"             => "Wesley De Groot (WDG.P) [<a href='http://www.wdgp.nl' target='_blank'>homepage</a>]<br>
                               Edwin Huijboom (WebVel) [<a href='http://www.webvel.nl' target='_blank'>homepage</a>]",
+
+    "Server Information"  => "-",
+    "Php Version"		  => phpversion(),
+    "Mysql Installed"	  => '<font color=\'green\'>[translate:"Yes"]</font>',
+    "Mod_rewrite enabled" => ((preg_match("#mod_rewrite#", $phpinfo)) ? '<font color=\'green\'>[translate:"Yes"]</font>' : '<font color=\'red\'>[translate:"No"]</font>'),
 
     "Language Info"       => "-",
     "Language"            => lang('_lang'),
