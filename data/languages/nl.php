@@ -27,6 +27,9 @@ $language['websites']      = "Websites";
 $language['authors']       = "Auteurs";
 $language['language info'] = "Taal Informatie";
 $language['translator(s)'] = "Vertalers";
+$language['php version']   = "PHP Versie";
+$language['mysql installed']     = "MySQL Geïnstaleerd";
+$language['mod_rewrite enabled'] = "mod_rewrite Ingeschakeld";
 
 //menu
 $language['information']         = "Informatie";
