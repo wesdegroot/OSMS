@@ -25,6 +25,7 @@ require "./modules/cloud/module.php";
 require "./data/required/templateparser.php";
 require "./data/required/corefunctions.php";
 require "./data/required/sitefunctions.php";
+require "./data/required/memberFunctions.php";
 
 // load ("enabled" modules)
 # MUST BUILT IN TO THE SYSYEM...
