@@ -57,8 +57,18 @@ $url = $cfg->get("site","url");
                         <div class="art-header-jpeg"></div>
                     </div>
                     <div class="art-logo">
+                     <table>
+                     <tr>
+                     <td>
                      <h1 id="name-text" class="art-logo-name"><a href="#"><?php global $sfg; echo $cfg->getValue('site','name'); ?></a></h1>
                      <div id='pagename'></div>
+                     </td>
+                     <td>
+
+                     </td>
+                     </tr>
+                     </table>
+                     <div style="right: 15px; top: 30px; z-index: 1;position: fixed;"><a href='[url]?setLang=nl'><img src='[url]data/images/flags/nl.png' alt='nl'></a> | <a href='[url]?setLang=en'><img src='[url]data/images/flags/en.png'></a></div>
                     </div>
                 </div>
                 <div class="art-content-layout">
@@ -114,7 +124,7 @@ echo menu("<li><a href=\"","\"><span class=\"l\"></span><span class=\"r\"></span
                     <div class="art-footer-r"></div>
                     <div class="art-footer-body">
                         <div class="art-footer-text">
-                            <a href='<?php echo $url; ?>/../?setLang=nl'>NL</a> ||||||| <a href='<?php echo $url; ?>/../?setLang=en'>EN</a>                            
+                            FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER                            
                         </div>
                         <div class="cleared"></div>
                     </div>
