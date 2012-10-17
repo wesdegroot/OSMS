@@ -33,6 +33,8 @@ $language['mod_rewrite enabled']        = "mod_rewrite Ingeschakeld";
 $language['yes']                        = "Ja";
 $language['no']                         = "Neen";
 $language['confirm']                    = "bevestig";
+$language['server information']         = "Server Informatie";
+$language['translationversie']          = "Taalbestand Versie";
 
 //menu
 $language['information']                = "Informatie";
