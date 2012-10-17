@@ -15,12 +15,23 @@
 
 function is__writable($path)
 {
-        $path = $path . "temp.o";
-        if (!($f = fopen($path, 'w+')))
+
+    if ($path{strlen($path)-1}=='/')
+        
+        return is__writable($path.uniqid(mt_rand()).'.tmp');
+    
+    elseif (file_exists($path) && ereg('.tmp', $path))
+    {
+        
+        if (!($f = @fopen($path, 'w+')))
             return false;
         fclose($f);
         unlink($path);
         return true;
+
+    }
+    else
+        return false; // Or return error - invalid path...
 }
 
 function lang($l) { return $l; }
@@ -39,7 +50,7 @@ $no  = "<font color='red'>"   . lang('no')  . "</font>";
 <tr><td>Password</td><td><input type='password' name='root.password'></td><td>[TEST]</td></tr>
 <tr><td>Email</td><td><input type='text' name='root.email'></td><td>[TEST]</td></tr>
 <tr><td>File Checks</td><td></td><td></td></tr>
-<tr><td>Configuration directory</td><td>./data/</td><td><?php echo (is__writable('data/')) ? $yes : $no; ?></td></tr>
-<tr><td>Module directory</td><td>./modules/</td><td><?php echo (is__writable('modules/')) ? $yes : $no; ?></td></tr>
-<tr><td>Template directory</td><td>./template/</td><td><?php echo (is__writable('template/')) ? $yes : $no; ?></td></tr>
+<tr><td>Configuration directory</td><td>./data/</td><td><?php echo (is_writeable('../data/')) ? $yes : $no; ?></td></tr>
+<tr><td>Module directory</td><td>./modules/</td><td><?php echo (is_writeable('../modules/')) ? $yes : $no; ?></td></tr>
+<tr><td>Template directory</td><td>./template/</td><td><?php echo (is_writeable('../template/')) ? $yes : $no; ?></td></tr>
 </table>
