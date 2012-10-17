@@ -18,6 +18,9 @@
  # => Rules: 
  # => http://wdgp.nl/#conditions
 
+define('YES',true);
+define('NO',false);
+
 class iniParser {
 	
 	var $_iniFilename = '';

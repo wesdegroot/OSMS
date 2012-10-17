@@ -17,18 +17,28 @@ error_reporting(E_ALL);
  # => Rules: 
  # => http://wdgp.nl/#conditions
 
+require './data/required/load.php';
+
 if(isset($_GET['setLang']))
 {
+	global $conf;
 	$_SESSION['lang'] = $_GET['setLang'];
-	header("refresh: 0; url='.'");
+	header("location: ".$conf['site']['url']);
+	exit;
 }
 
 if(!isset($_SESSION['lang']))
 {
+	global $conf;
 	if ($conf['system']['language'] == "auto")
 	{
-		//TOBUILD
-		$lang = "en";
+		$lang = ($_SERVER['HTTP_ACCEPT_LANGUAGE']);  
+
+		if(ereg("nl", $lang)) {  
+   			$lang = "nl";
+		} else {  
+    		$lang = "en";
+		} 
 	}
 	else
 	{
@@ -36,10 +46,9 @@ if(!isset($_SESSION['lang']))
 	}
 
 	$_SESSION['lang'] = $lang;
-	header("refresh: 0;");
+	header("location: ".$conf['site']['url']);
+	exit();
 }
-
-require './data/required/load.php';
 
 $site = new superclass();
 

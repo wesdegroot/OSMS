@@ -12,6 +12,8 @@
  #
  # => Rules: 
  # => http://wdgp.nl/#conditions
+$cfg              = new iniParser("./data/config/system.sys");
+$system           = $cfg->get("system");
 
 $cfg              = new iniParser("./data/config/configuration.ini");
 $config           = array();

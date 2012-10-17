@@ -18,7 +18,7 @@ define('language', @$_SESSION['lang']);
 if(file_exists("./data/languages/" . language . '.php'))
 {
     include "./data/languages/" . language . '.php';
-}else{ exit('MISSING TRANSLATION'); }
+}
 
 if ( is_array ( $conf['modules'] ) )
 {
@@ -32,17 +32,19 @@ foreach($conf['modules'] as $mod => $ule)
 }
 
 function systemVersion () {
+	global $system;
 $info = array(
-    "System Info"      => "-",
-    "Version"          => "0.0.0.1",
-    "Websites"         => "<a href='http://home.wdgss.nl/projecten/OSMS' target='_blank'>Demo Website</a>, <a href='http://home.wdgss.nl/projecten/OSMS' target='_blank'>Download Website</a>, <a href='https://github.com/wesdegroot/OSMS/issues' target='_blank'>Support Website</a>",
-    "Authors"          => "Wesley De Groot (WDG.P) [<a href='http://www.wdgp.nl' target='_blank'>homepage</a>]<br>
-                           Edwin Huijboom (WebVel) [<a href='http://www.webvel.nl' target='_blank'>homepage</a>]",
-    
-    "Language Info"    => "-",
-    "Language"         => lang('_lang'),
-    "Translator(s)"    => lang('_translator'),
-    "Version"          => lang('_version')
+    "System Info"         => "-",
+    "Version"             => "{$system['version']} " . ( ($system['stable']==YES) ? 'Final' : 'Beta'),
+    "Websites"            => "<a href='http://home.wdgss.nl/projecten/OSMS' target='_blank'>Demo Website</a>, <a href='http://home.wdgss.nl/projecten/OSMS' target='_blank'>Download Website</a>, <a href='https://github.com/wesdegroot/OSMS/issues' target='_blank'>Support Website</a>",
+    "Authors"             => "Wesley De Groot (WDG.P) [<a href='http://www.wdgp.nl' target='_blank'>homepage</a>]<br>
+                              Edwin Huijboom (WebVel) [<a href='http://www.webvel.nl' target='_blank'>homepage</a>]",
+    "[if!paid]serial[/if]"=> $system['serial'],
+
+    "Language Info"       => "-",
+    "Language"            => lang('_lang'),
+    "Translator(s)"       => lang('_translator'),
+    "TranslationVersion"  => lang('_version')
 );
 
 $valve  = "<table>";
