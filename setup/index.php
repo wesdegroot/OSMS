@@ -12,7 +12,23 @@
  #
  # => Rules: 
  # => http://wdgp.nl/#conditions
-
-
+function lang($l) { return $l; }
+$yes = "<font color='green'>" . lang('yes') . "</font>";
+$no  = "<font color='red'>"   . lang('no')  . "</font>";
 
 ?>
+<table>
+<tr><td>Username</td><td><input type='text' name='mysql.username'></td><td>[TEST]</td></tr>
+<tr><td>Password</td><td><input type='text' name='mysql.password'></td><td>[TEST]</td></tr>
+<tr><td>Host</td><td><input type='text' name='mysql.host'></td><td>[TEST]</td></tr>
+<tr><td>Database</td><td><input type='text' name='mysql.database'></td><td>[TEST]</td></tr>
+<tr><td>Prefix</td><td><input type='text' name='mysql.prefix' value='osms_'></td><td>[TEST]</td></tr>
+<tr><td>"Root" User</td><td></td><td>[</td></tr>
+<tr><td>Username</td><td><input type='text' name='root.username'></td><td>[TEST]</td></tr>
+<tr><td>Password</td><td><input type='password' name='root.password'></td><td>[TEST]</td></tr>
+<tr><td>Email</td><td><input type='text' name='root.email'></td><td>[TEST]</td></tr>
+<tr><td>File Checks</td><td></td><td></td></tr>
+<tr><td>Configuration directory</td><td>./data/</td><td><?php echo (is_writeable('data')) ? $yes : $no; ?></td></tr>
+<tr><td>Module directory</td><td>./modules</td><td><?php echo (is_writeable('modules')) ? $yes : $no; ?></td></tr>
+<tr><td>Template directory</td><td>./template</td><td><?php echo (is_writeable('template')) ? $yes : $no; ?></td></tr>
+</table>

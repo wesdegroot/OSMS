@@ -34,7 +34,7 @@ $language['yes']                        = "Ja";
 $language['no']                         = "Neen";
 $language['confirm']                    = "bevestig";
 $language['server information']         = "Server Informatie";
-$language['translationversie']          = "Taalbestand Versie";
+$language['translationversion']         = "Taalbestand Versie";
 
 //menu
 $language['information']                = "Informatie";

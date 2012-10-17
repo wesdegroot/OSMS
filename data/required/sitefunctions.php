@@ -54,8 +54,8 @@ $info = array(
 
     "Server Information"  => "-",
     "Php Version"		  => phpversion(),
-    "Mysql Installed"	  => '<font color=\'green\'>[translate:"Yes"]</font>',
-    "Mod_rewrite enabled" => ((preg_match("#mod_rewrite#", $phpinfo)) ? '<font color=\'green\'>[translate:"Yes"]</font>' : '<font color=\'red\'>[translate:"No"]</font>'),
+    "Mysql Installed"	  => '<font color=\'green\'>'.lang("Yes").'</font>',
+    "Mod_rewrite enabled" => ((preg_match("#mod_rewrite#", $phpinfo)) ? '<font color=\'green\'>'.lang("Yes").'</font>' : '<font color=\'red\'>'.lang("No").'</font>'),
 
     "Language Info"       => "-",
     "Language"            => lang('_lang'),
