@@ -16,3 +16,11 @@
 // THE OPEN-ON-MOBILE-BROWSER-THEME (Mobiles/Tablets)
 
 ?>
+<script type="text/javascript" src="data/javascripts/ajax.js">
+    /* WDG.P AJAX CLASS -- © WDG.P 2012 */
+</script>
+<?php echo menu(null,null,',&nbsp;'); ?>
+<hr>
+<div id='pagename'></div>
+<hr>
+<div id='main_cont'></div>

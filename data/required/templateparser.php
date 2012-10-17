@@ -63,7 +63,7 @@ class superclass
 				include './data/pages/' . $page . '.php';
 				$page = ob_get_contents();
 				ob_end_clean();
-				$page = preg_replace("#\[translate\:\"(.*)\"\]#", lang("\\1"), $page);
+				$page = preg_replace("#\[translate\:\"(.*?)\"\]#si", lang("\\1"), $page);
 				return $page;
 			}
 		elseif ( file_exists ('./modules/' . $page . '/module.php') )
@@ -72,7 +72,7 @@ class superclass
 				include './modules/' . $page . '/module.php';
 				$page = ob_get_contents();
 				ob_end_clean();
-				$page = preg_replace("#\[translate\:\"(.*)\"\]#", lang("\\1"), $page);
+				$page = preg_replace("#\[translate\:\"(.*?)\"\]#si", lang("\\1"), $page);
 				return $page;
 			}
 		else
