@@ -32,14 +32,20 @@ foreach($conf['modules'] as $mod => $ule)
 }
 
 function systemVersion () {
-	global $system;
+	global $system, $conf;
 $info = array(
     "System Info"         => "-",
     "Version"             => "{$system['version']} " . ( ($system['stable']==YES) ? 'Final' : 'Beta'),
-    "Websites"            => "<a href='http://home.wdgss.nl/projecten/OSMS' target='_blank'>Demo Website</a>, <a href='http://home.wdgss.nl/projecten/OSMS' target='_blank'>Download Website</a>, <a href='https://github.com/wesdegroot/OSMS/issues' target='_blank'>Support Website</a>",
+    "Websites"            => "
+							  <table>
+							  <tr><td><img width='16px' height='16px' src='{$conf['site']['url']}data/icons/online.png' alt='demo'></td><td><a href='http://home.wdgss.nl/projecten/OSMS' target='_blank'>Demo Website</a></td></tr>
+    						  <tr><td><img src='{$conf['site']['url']}data/icons/get.gif' alt='download'></td><td><a href='http://home.wdgss.nl/projecten/OSMS' target='_blank'>Download Website</a><td></tr>
+							  <tr><td><img src='{$conf['site']['url']}data/icons/set.gif' alt='write issue'></td><td>
+    						  <a href='https://github.com/wesdegroot/OSMS/issues' target='_blank'>Support Website</a></td></tr>
+							  </table>    						
+    						",
     "Authors"             => "Wesley De Groot (WDG.P) [<a href='http://www.wdgp.nl' target='_blank'>homepage</a>]<br>
                               Edwin Huijboom (WebVel) [<a href='http://www.webvel.nl' target='_blank'>homepage</a>]",
-    "[if!paid]serial[/if]"=> $system['serial'],
 
     "Language Info"       => "-",
     "Language"            => lang('_lang'),
