@@ -85,7 +85,7 @@ class superclass
 
 	public function loadStyle($some, $page)
 	{
-		global $config, $cfg;
+		global $config, $cfg, $conf;
 		$file = './themes/' . $some . '/theme.php';
 		if ( file_exists ( $file ) ) 
 		{
@@ -94,6 +94,9 @@ class superclass
 			$ob = ob_get_contents();
 			ob_end_clean();
 			$file = $ob;
+
+			$file = preg_replace("#\[url\]#", $conf['site']['url'], $file);
+
 		    $this->parseFile($file, $page);
 		}
 		else
