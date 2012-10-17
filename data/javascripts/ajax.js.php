@@ -105,6 +105,7 @@ function LoadAPage(page,main) {
 }
 
 function LoadAjaxPage(page,main) {
+ var runned=true;
  if ( page.match(main) )
  {
   var page = page.split("/");
@@ -133,4 +134,7 @@ function LoadAjaxPage(page,main) {
 var hash=document.location.hash.split("#");
 var hash=hash[1]; // means pagename
 if (typeof(hash) == "undefined") { var hash='home'; }
-setTimeout("LoadAjaxPage('http://home.wdgss.nl/projecten/OSMS/"+hash+"','http://home.wdgss.nl/projecten/OSMS/');", 500)
+
+if (typeof(runned) == "undefined") {
+  setTimeout("LoadAjaxPage('http://home.wdgss.nl/projecten/OSMS/"+hash+"','http://home.wdgss.nl/projecten/OSMS/');", 500)
+}
