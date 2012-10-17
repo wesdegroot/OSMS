@@ -52,5 +52,5 @@ $no  = "<font color='red'>"   . lang('no')  . "</font>";
 <tr><td>File Checks</td><td></td><td></td></tr>
 <tr><td>Configuration directory</td><td>./data/</td><td><?php echo (is_writeable('../data/')) ? $yes : $no; ?></td></tr>
 <tr><td>Module directory</td><td>./modules/</td><td><?php echo (is_writeable('../modules/')) ? $yes : $no; ?></td></tr>
-<tr><td>Template directory</td><td>./template/</td><td><?php echo (is_writeable('../template/')) ? $yes : $no; ?></td></tr>
+<tr><td>Template directory</td><td>./themes/</td><td><?php echo (is_writeable('../themes/')) ? $yes : $no; ?></td></tr>
 </table>
