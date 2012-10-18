@@ -44,9 +44,10 @@ for($i=0; $i<101; $i++)
 
  for($i=0; $i<sizeof($menu); $i++)
  {
- 	if (!preg_match("#http\://#", $menu[$i][1]))
+ 	$menu[$i][1] = preg_replace("#\{url\}#", $conf['site']['url'], $menu[$i][1]);
+  	if (!preg_match("#http\://#", $menu[$i][1]))
  	{
-	 	$ajaxstr = "onclick=\"LoadAjaxPage('http://home.wdgss.nl/projecten/OSMS/{$menu[$i][1]}','http://home.wdgss.nl/projecten/OSMS/');";
+	 	$ajaxstr = "onclick=\"LoadAjaxPage('{$conf['site']['url']}{$menu[$i][1]}','{$conf['site']['url']}');";
  		echo $pa1 . "#\"" . $ajaxstr . $pa2 . $menu[$i][0] . $pa3;
  	}
  	else
