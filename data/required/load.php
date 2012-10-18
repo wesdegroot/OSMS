@@ -16,6 +16,7 @@
 //require "./data/config/configuration.php";
 require "./data/required/iniFunctions.php";
 require "./data/required/readConfig.php";
+require "./data/required/httpClass.php";
 
 // check system files
 require "./data/required/loadModules.php";

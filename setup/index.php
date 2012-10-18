@@ -41,6 +41,23 @@ $yes = "<font color='green'>" . lang('yes') . "</font>";
 $no  = "<font color='red'>"   . lang('no')  . "</font>";
 
 ?>
+<script>
+function myFunction(e)
+{
+if (e < 6) {
+    document.getelementbyId('usrpass').innerHTML = "<font color='red'>To Short</font>";
+}
+else
+{
+    document.getelementbyId('usrpass').innerHTML = "<font color='green'>Good</font>";   
+}
+}
+</script>
+</head>
+<body>
+
+<p>A function is triggered when the user is pressing a key in the input field. The function alerts the key pressed.</p>
+
 <table>
 <tr><td>Username</td><td><input type='text' name='mysql.username'></td><td>[TEST]</td></tr>
 <tr><td>Password</td><td><input type='text' name='mysql.password'></td><td>[TEST]</td></tr>
@@ -49,7 +66,7 @@ $no  = "<font color='red'>"   . lang('no')  . "</font>";
 <tr><td>Prefix</td><td><input type='text' name='mysql.prefix' value='osms_'></td><td>[TEST]</td></tr>
 <tr><td>"Root" User</td><td></td><td></td></tr>
 <tr><td>Username</td><td><input type='text' name='root.username'></td><td>[TEST]</td></tr>
-<tr><td>Password</td><td><input type='password' name='root.password'></td><td>[TEST]</td></tr>
+<tr><td>Password</td><td><input type='password' name='root.password' onkeypress="myFunction(this.value)" id='usrpwd'></td><td><div id='usrpass'></div></td></tr>
 <tr><td>Email</td><td><input type='text' name='root.email'></td><td>[TEST]</td></tr>
 <tr><td>File Checks</td><td></td><td></td></tr>
 <tr><td>Configuration directory</td><td>./data/</td><td><?php echo (is_writeable('../data/')) ? $yes : $no; ?></td></tr>

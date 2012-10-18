@@ -3,8 +3,7 @@ error_reporting(E_ALL);
 @ini_set('display_errors',1);
 @session_start();
 
-if($_SERVER['HTTP_HOST']=="home.wdgss.nl")
-{ header("location: http://osms.wdgp.nl"); exit; }
+
  #New Php File
  # Created With  Macbook Pro, 15", Late 2011
  # Mac OS X Mountain Lion
@@ -20,6 +19,12 @@ if($_SERVER['HTTP_HOST']=="home.wdgss.nl")
  # => http://wdgp.nl/#conditions
 
 require './data/required/load.php';
+
+if( !preg_match ( "#" . $_SERVER['HTTP_HOST'] . "#" , $conf['site']['url'] ) )
+{
+ header("location: " . $conf['site']['url']); 
+ exit; 
+}
 
 if(isset($_GET['setLang']))
 {
