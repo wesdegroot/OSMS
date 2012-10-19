@@ -100,12 +100,44 @@ function checkAll()
          document.getElementById('usrpass.status').innerHTML == 1 &&
          document.getElementById('usrmail.status').innerHTML == 1
        ) {
-           alert('done :D');
+           document.getElementById('subbutton').disabled = false;
        }
        else
        {
            //alert('ERROR MISSING SOME FIELDS');
+           document.getElementById('subbutton').disabled = true;           
        }
+
+       document.getElementById('subbutton').value        = translate('save');
+}
+
+function reset()
+{
+    document.getElementById('sqluser.status').innerHTML   =  '0';
+    document.getElementById('sqluser').innerHTML          =  "<font color='red'>" + translate('Resetted') + "</font>";
+
+    document.getElementById('sqlpass.status').innerHTML   =  '0';
+    document.getElementById('sqlpass').innerHTML          =  "<font color='red'>" + translate('Resetted') + "</font>";
+
+    document.getElementById('sqlhost.status').innerHTML   =  '1';
+    document.getElementById('sqlhost').innerHTML          =  "<font color='red'>" + translate('Resetted') + "</font>";
+
+    document.getElementById('sqldb.status').innerHTML     =  '0';
+    document.getElementById('sqldb').innerHTML            =  "<font color='red'>" + translate('Resetted') + "</font>";
+
+    document.getElementById('sqlprefix.status').innerHTML =  '1';
+    document.getElementById('sqlprefix').innerHTML        =  "<font color='red'>" + translate('Resetted') + "</font>";
+
+    document.getElementById('usrname.status').innerHTML   =  '0';
+    document.getElementById('usrname').innerHTML          =  "<font color='red'>" + translate('Resetted') + "</font>";
+
+    document.getElementById('usrpass.status').innerHTML   =  '0';
+    document.getElementById('usrpass').innerHTML          =  "<font color='red'>" + translate('Resetted') + "</font>";
+
+    document.getElementById('usrmail.status').innerHTML   =  '0';
+    document.getElementById('usrmail').innerHTML          =  "<font color='red'>" + translate('Resetted') + "</font>";
+
+    document.getElementById('subbutton').disabled         = true;
 }
 </script>
 </head>
@@ -130,7 +162,7 @@ function checkAll()
                 </font>
             </span>
 
-            <span id='sqluser.status'></span>
+            <span id='sqluser.status' style='display:none;visibility:hidden;'></span>
         </td>
     </tr>
     <tr>
@@ -149,7 +181,7 @@ function checkAll()
                 </font>
             </span>
 
-            <span id='sqlpass.status'></span>
+            <span id='sqlpass.status' style='display:none;visibility:hidden;'></span>
         </td>
     </tr>
     <tr>
@@ -168,7 +200,7 @@ function checkAll()
                 </font>
             </span>
 
-            <span id='sqlhost.status'>1</span>
+            <span id='sqlhost.status' style='display:none;visibility:hidden;'>1</span>
         </td>
     </tr>
     <tr>
@@ -187,7 +219,7 @@ function checkAll()
                 </font>
             </span>
 
-            <span id='sqldb.status'></span>
+            <span id='sqldb.status' style='display:none;visibility:hidden;'></span>
         </td>
     </tr>
     <tr>
@@ -206,7 +238,7 @@ function checkAll()
                 </font>
             </span>
 
-            <span id='sqlprefix.status'>1</span>
+            <span id='sqlprefix.status' style='display:none;visibility:hidden;'>1</span>
         </td>
     </tr>
     <tr>
@@ -232,12 +264,12 @@ function checkAll()
                 </font>
             </span>
 
-            <span id='usrname.status'></span>
+            <span id='usrname.status' style='display:none;visibility:hidden;'></span>
         </td>
     </tr>
     <tr>
         <td>
-            Password
+            Password9
         </td>
         <td>
             <input type='password' name='root.password' onkeypress="checkLength(this.value,6,'usrpass')" onfocus="checkLength(this.value,6,'usrpass')">
@@ -251,7 +283,7 @@ function checkAll()
                 </font>
             </span>
 
-            <span id='usrpass.status'></span>
+            <span id='usrpass.status' style='display:none;visibility:hidden;'></span>
         </td>
     </tr>
     <tr>
@@ -270,7 +302,7 @@ function checkAll()
                 </font>
             </span>
 
-            <span id='usrmail.status'></span>
+            <span id='usrmail.status' style='display:none;visibility:hidden;'></span>
         </td>
     </tr>
     <tr>
@@ -323,5 +355,10 @@ function checkAll()
         <td>
             <?php echo (is_writeable('../')) ? $yes : $no; ?>
         </td>
+    </tr>
+    <tr>
+        <td><input type='reset' value='reset' onclick='reset();'></td>
+        <td></td>
+        <td><input id='subbutton' type='submit' value='save' disabled='true'></td>
     </tr>
 </table>

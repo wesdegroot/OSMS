@@ -43,6 +43,7 @@ $language['good']                       = "Goed";
 $language['perfect']                    = "Perfect";
 $language['valid']                      = "Geldig";
 $language['may not be empty']           = "Mag NIET leeg zijn";
+$language['resetted']                   = "Ge-reset";
 
 //menu
 $language['information']                = "Informatie";
