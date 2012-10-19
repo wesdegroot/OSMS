@@ -31,4 +31,3 @@ echo $wo . "\n\r\t" . $ow . "\r\n";
         return id.toLowerCase();
     }
 }
-?>
