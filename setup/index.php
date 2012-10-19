@@ -46,11 +46,15 @@ $no  = "<font color='red'><script>document.write(translate('no'));</script></fon
 <script type="text/javascript">
 function checkLength(e,l,i)
 {
-    if (e.length < l)
+    if (e.length == 0)
+    {
+        document.getElementById(i).innerHTML = "<font color='red'>" + translate('may not be empty') + "</font>";
+    }
+    else if (e.length < l)
     {
         document.getElementById(i).innerHTML = "<font color='red'>" + translate('To Short') + "</font>";
     }
-    else if (e.length < l+4 )
+    else if (e.length < l+2 )
     {
         document.getElementById(i).innerHTML = "<font color='orange'>" + translate('Good') + "</font>";
     }
@@ -152,10 +156,16 @@ function checkEmail(e,i)
             Username
         </td>
         <td>
-            <input type='text' name='root.username'>
+            <input type='text' name='root.username' onkeypress="checkLength(this.value,0,'usrname')" onfocus="checkLength(this.value,0,'usrname')">
         </td>
         <td>
-            [TEST]
+            <span id='usrname'>
+                <font color='red'>
+                    <script>
+                        document.write(translate('may not be empty'));
+                    </script>
+                </font>
+            </span>
         </td>
     </tr>
     <tr>
@@ -169,7 +179,7 @@ function checkEmail(e,i)
             <span id='usrpass'>
                 <font color='red'>
                     <script>
-                        document.write(translate('To Short'));
+                        document.write(translate('may not be empty'));
                     </script>
                 </font>
             </span>
@@ -186,7 +196,7 @@ function checkEmail(e,i)
             <span id='usrmail'>
                 <font color='red'>
                     <script>
-                        document.write(translate('Invalid'));
+                        document.write(translate('may not be empty'));
                     </script>
                 </font>
             </span>
