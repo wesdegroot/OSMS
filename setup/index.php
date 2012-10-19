@@ -41,12 +41,9 @@ $yes = "<font color='green'>" . lang('yes') . "</font>";
 $no  = "<font color='red'>"   . lang('no')  . "</font>";
 
 ?>
+<script type="text/javascript" src="../data/javascripts/lang.js">
+</script>
 <script type="text/javascript">
-function lang(l)
-{
-    return l;
-}
-
 function checkLength(e,l,i)
 {
     if (e.length < l)
