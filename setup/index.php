@@ -13,61 +13,67 @@
  # => Rules: 
  # => http://wdgp.nl/#conditions
 if ( $_SERVER['REQUEST_URI'] == "/projecten/OSMS/setup/")
- header("location: http://osms.wdgp.nl/setup/");
+           header("location: http://osms.wdgp.nl/setup/");
  
 function is__writable($path)
 {
-
-    if ($path{strlen($path)-1}=='/')
-        
+    if ($path{strlen($path)-1}=='/')       
         return is__writable($path.uniqid(mt_rand()).'.tmp');
     
     elseif (file_exists($path) && ereg('.tmp', $path))
-    {
-        
+    {  
         if (!($f = @fopen($path, 'w+')))
             return false;
         fclose($f);
         unlink($path);
         return true;
-
     }
     else
         return false; // Or return error - invalid path...
 }
 
-function lang($l) { return $l; }
+function lang($l)
+{
+    return $l;
+}
+
 $yes = "<font color='green'>" . lang('yes') . "</font>";
 $no  = "<font color='red'>"   . lang('no')  . "</font>";
 
 ?>
 <script type="text/javascript">
+function lang(l)
+{
+    return l;
+}
+
 function checkLength(e,l,i)
 {
-if (e.length < l) {
-    document.getElementById(i).innerHTML = "<font color='red'>To Short</font>";
-}
-else if (e.length < l+4 )
-{
-    document.getElementById(i).innerHTML = "<font color='orange'>Good</font>";   
-}
-else
-{
-    document.getElementById(i).innerHTML = "<font color='green'>Perfect</font>";   
-}
+    if (e.length < l)
+    {
+        document.getElementById(i).innerHTML = "<font color='red'>To Short</font>";
+    }
+    else if (e.length < l+4 )
+    {
+        document.getElementById(i).innerHTML = "<font color='orange'>Good</font>";   
+    }
+    else
+    {
+        document.getElementById(i).innerHTML = "<font color='green'>Perfect</font>";   
+    }
 }
 
 function checkEmail(e,i)
 {
-   var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+    var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
 
-if (reg.test(e) == false) {
-    document.getElementById(i).innerHTML = "<font color='red'>Invalid</font>";
-}
-else
-{
-    document.getElementById(i).innerHTML = "<font color='green'>Valid</font>";   
-}
+    if (reg.test(e) == false) {
+        document.getElementById(i).innerHTML = "<font color='red'>Invalid</font>";
+    }
+    else
+    {
+        document.getElementById(i).innerHTML = "<font color='green'>Valid</font>";   
+    }
 }
 </script>
 </head>
@@ -128,7 +134,13 @@ else
             <input type='text' name='mysql.prefix' value='osms_' onfocus="checkLength(this.value,0,'sqlprefix')" onkeypress="checkLength(this.value,0,'sqlprefix')">
         </td>
         <td>
-            <span id='sqlprefix'></span>
+            <span id='sqlprefix'>
+                <font color='green'>
+                    <script>
+                        document.write(lang('Yes'));
+                    </script>
+                </font>
+            </span>
         </td>
     </tr>
     <tr>
@@ -157,7 +169,9 @@ else
             <input type='password' name='root.password' onkeypress="checkLength(this.value,6,'usrpass')" onfocus="checkLength(this.value,6,'usrpass')">
         </td>
         <td>
-            <span id='usrpass'></span>
+            <span id='usrpass'>
+                <font color='red'>To Short</font>
+            </span>
         </td>
     </tr>
     <tr>
@@ -168,7 +182,11 @@ else
             <input type='text' name='root.email' onkeypress="checkEmail(this.value,'usrmail')" onfocus="checkEmail(this.value,'usrmail')">
         </td>
         <td>
-            <span id='usrmail'></span>
+            <span id='usrmail'>
+                <font color='red'>
+                    Invalid
+                </font>
+            </span>
         </td>
     </tr>
     <tr>
