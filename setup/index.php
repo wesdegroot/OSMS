@@ -37,8 +37,8 @@ function lang($l)
     return $l;
 }
 
-$yes = "<font color='green'>" . lang('yes') . "</font>";
-$no  = "<font color='red'>"   . lang('no')  . "</font>";
+$yes = "<font color='green'><script>document.write(translate('yes'));</script></font>";
+$no  = "<font color='red'><script>document.write(translate('no'));</script></font>";
 
 ?>
 <script type="text/javascript" src="../data/javascripts/lang.js">
@@ -48,15 +48,15 @@ function checkLength(e,l,i)
 {
     if (e.length < l)
     {
-        document.getElementById(i).innerHTML = "<font color='red'>To Short</font>";
+        document.getElementById(i).innerHTML = "<font color='red'>" + translate('To Short') + "</font>";
     }
     else if (e.length < l+4 )
     {
-        document.getElementById(i).innerHTML = "<font color='orange'>Good</font>";   
+        document.getElementById(i).innerHTML = "<font color='orange'>" + translate('Good') + "</font>";
     }
     else
     {
-        document.getElementById(i).innerHTML = "<font color='green'>Perfect</font>";   
+        document.getElementById(i).innerHTML = "<font color='green'>" + translate('Perfect') + "</font>";   
     }
 }
 
@@ -65,11 +65,11 @@ function checkEmail(e,i)
     var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
 
     if (reg.test(e) == false) {
-        document.getElementById(i).innerHTML = "<font color='red'>Invalid</font>";
+        document.getElementById(i).innerHTML = "<font color='red'>" + translate('Invalid') + "</font>";
     }
     else
     {
-        document.getElementById(i).innerHTML = "<font color='green'>Valid</font>";   
+        document.getElementById(i).innerHTML = "<font color='green'>" + translate('Valid') + "</font>";   
     }
 }
 </script>
@@ -134,7 +134,7 @@ function checkEmail(e,i)
             <span id='sqlprefix'>
                 <font color='green'>
                     <script>
-                        document.write(lang('Perfect'));
+                        document.write(translate('Perfect'));
                     </script>
                 </font>
             </span>
@@ -169,7 +169,7 @@ function checkEmail(e,i)
             <span id='usrpass'>
                 <font color='red'>
                     <script>
-                        document.write(lang('To Short'));
+                        document.write(translate('To Short'));
                     </script>
                 </font>
             </span>
@@ -186,7 +186,7 @@ function checkEmail(e,i)
             <span id='usrmail'>
                 <font color='red'>
                     <script>
-                        document.write(lang('Invalid'));
+                        document.write(translate('Invalid'));
                     </script>
                 </font>
             </span>
