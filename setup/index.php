@@ -138,8 +138,6 @@ function reset()
 </head>
 <body>
 
-<p>A function is triggered when the user is pressing a key in the input field. The function alerts the key pressed.</p>
-
 <table>
     <tr>
         <td>
