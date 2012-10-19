@@ -45,11 +45,11 @@ $no  = "<font color='red'>"   . lang('no')  . "</font>";
 function myFunction(e)
 {
 if (e < 6) {
-    document.getelementbyId('usrpass').innerHTML = "<font color='red'>To Short</font>";
+    getelementbyId('usrpass').innerHTML = "<font color='red'>To Short</font>";
 }
 else
 {
-    document.getelementbyId('usrpass').innerHTML = "<font color='green'>Good</font>";   
+    getelementbyId('usrpass').innerHTML = "<font color='green'>Good</font>";   
 }
 }
 </script>
