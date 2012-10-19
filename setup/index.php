@@ -243,6 +243,7 @@ function reset()
             <span id='sqlprefix.status' style='display:none;visibility:hidden;'>1</span>
         </td>
     </tr>
+    <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></td>
     <tr>
         <td>
             "<script>document.write(translate('Root'));</script>" <script>document.write(translate('User'));</script>
@@ -307,6 +308,7 @@ function reset()
             <span id='usrmail.status' style='display:none;visibility:hidden;'></span>
         </td>
     </tr>
+    <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></td>
     <tr>
         <td>
             <script>document.write(translate('File Checks'));</script>
