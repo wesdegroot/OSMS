@@ -137,7 +137,7 @@ function checkEmail(e,i)
             <span id='sqlprefix'>
                 <font color='green'>
                     <script>
-                        document.write(lang('Yes'));
+                        document.write(lang('Perfect'));
                     </script>
                 </font>
             </span>
@@ -170,7 +170,11 @@ function checkEmail(e,i)
         </td>
         <td>
             <span id='usrpass'>
-                <font color='red'>To Short</font>
+                <font color='red'>
+                    <script>
+                        document.write(lang('To Short'));
+                    </script>
+                </font>
             </span>
         </td>
     </tr>
@@ -184,7 +188,9 @@ function checkEmail(e,i)
         <td>
             <span id='usrmail'>
                 <font color='red'>
-                    Invalid
+                    <script>
+                        document.write(lang('Invalid'));
+                    </script>
                 </font>
             </span>
         </td>
