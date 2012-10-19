@@ -36,6 +36,12 @@ $language['confirm']                    = "bevestig";
 $language['server information']         = "Server Informatie";
 $language['translationversion']         = "Taalbestand Versie";
 
+//setup
+$lang['to short']                       = "Te kort";
+$lang['invalid']                        = "Nep";
+$lang['good']                           = "Goed";
+$lang['perfect']                        = "Perfect";
+
 //menu
 $language['information']                = "Informatie";
 $language['interessting facts']         = "Intressante Weetjes";
