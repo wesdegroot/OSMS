@@ -32,11 +32,6 @@ function is__writable($path)
         return false; // Or return error - invalid path...
 }
 
-function lang($l)
-{
-    return $l;
-}
-
 $yes = "<font color='green'><script>document.write(translate('yes'));</script></font>";
 $no  = "<font color='red'><script>document.write(translate('no'));</script></font>";
 
@@ -148,7 +143,14 @@ function reset()
 <table>
     <tr>
         <td>
-            Username
+            <script>document.write(translate('MySQL'));</script>
+        </td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>
+            <script>document.write(translate('Username'));</script>
         </td>
         <td>
             <input type='text' name='mysql.username' onfocus="checkLength(this.value,0,'sqluser')" onkeypress="checkLength(this.value,0,'sqluser')">
@@ -167,7 +169,7 @@ function reset()
     </tr>
     <tr>
         <td>
-            Password
+            <script>document.write(translate('Password'));</script>
         </td>
         <td>
             <input type='text' name='mysql.password' onfocus="checkLength(this.value,0,'sqlpass')" onkeypress="checkLength(this.value,0,'sqlpass')">
@@ -186,7 +188,7 @@ function reset()
     </tr>
     <tr>
         <td>
-            Host
+            <script>document.write(translate('Host'));</script>
         </td>
         <td>
             <input type='text' name='mysql.host' value="localhost" onfocus="checkLength(this.value,0,'sqlhost')" onkeypress="checkLength(this.value,0,'sqlhost')">
@@ -205,7 +207,7 @@ function reset()
     </tr>
     <tr>
         <td>
-            Database
+            <script>document.write(translate('Database'));</script>
         </td>
         <td>
             <input type='text' name='mysql.database' onfocus="checkLength(this.value,0,'sqldb')" onkeypress="checkLength(this.value,0,'sqldb')">
@@ -224,7 +226,7 @@ function reset()
     </tr>
     <tr>
         <td>
-            Prefix
+            <script>document.write(translate('Prefix'));</script>
         </td>
         <td>
             <input type='text' name='mysql.prefix' value='osms_' onfocus="checkLength(this.value,0,'sqlprefix')" onkeypress="checkLength(this.value,0,'sqlprefix')">
@@ -243,14 +245,14 @@ function reset()
     </tr>
     <tr>
         <td>
-            "Root" User
+            "<script>document.write(translate('Root'));</script>" <script>document.write(translate('User'));</script>
         </td>
         <td></td>
         <td></td>
     </tr>
     <tr>
         <td>
-            Username
+            <script>document.write(translate('Username'));</script>
         </td>
         <td>
             <input type='text' name='root.username' onkeypress="checkLength(this.value,0,'usrname')" onfocus="checkLength(this.value,0,'usrname')">
@@ -269,7 +271,7 @@ function reset()
     </tr>
     <tr>
         <td>
-            Password9
+            <script>document.write(translate('Password'));</script>
         </td>
         <td>
             <input type='password' name='root.password' onkeypress="checkLength(this.value,6,'usrpass')" onfocus="checkLength(this.value,6,'usrpass')">
@@ -288,7 +290,7 @@ function reset()
     </tr>
     <tr>
         <td>
-            Email
+            <script>document.write(translate('Email'));</script>
         </td>
         <td>
             <input type='text' name='root.email' onkeypress="checkEmail(this.value,'usrmail')" onfocus="checkEmail(this.value,'usrmail')">
@@ -307,14 +309,14 @@ function reset()
     </tr>
     <tr>
         <td>
-            File Checks
+            <script>document.write(translate('File Checks'));</script>
         </td>
         <td></td>
         <td></td>
     </tr>
     <tr>
         <td>
-            Configuration directory
+            <script>document.write(translate('Configuration directory
         </td>
         <td>
             ./data/
@@ -325,7 +327,7 @@ function reset()
     </tr>
     <tr>
         <td>
-            Module directory
+            <script>document.write(translate('Module directory'));</script>
         </td>
         <td>
             ./modules/
@@ -336,7 +338,7 @@ function reset()
     </tr>
     <tr>
         <td>
-            Template directory
+            <script>document.write(translate('Template directory'));</script>
         </td>
         <td>
             ./themes/
@@ -347,7 +349,7 @@ function reset()
     </tr>
     <tr>
         <td>
-            Overall directory
+            <script>document.write(translate('Overall directory'));</script>
         </td>
         <td>
             ./
