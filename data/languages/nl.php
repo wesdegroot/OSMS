@@ -41,6 +41,7 @@ $language['to short']                   = "Te kort";
 $language['invalid']                    = "Nep";
 $language['good']                       = "Goed";
 $language['perfect']                    = "Perfect";
+$language['valid']                      = "Geldig";
 
 //menu
 $language['information']                = "Informatie";
