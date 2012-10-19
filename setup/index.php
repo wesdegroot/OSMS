@@ -357,7 +357,7 @@ function reset()
         </td>
     </tr>
     <tr>
-        <td><input type='reset' value='reset' onclick='reset();'></td>
+        <td><input type='reset' value='reset' onclick='reset();return true;'></td>
         <td></td>
         <td><input id='subbutton' type='submit' value='save' disabled='true'></td>
     </tr>
