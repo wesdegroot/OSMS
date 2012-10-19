@@ -12,8 +12,7 @@
 include "../required/iniFunctions.php";
 $cfg = new iniParser("../config/configuration.ini");
 $url = $cfg->get("site","url");
-
-function debug(logerror) { 
+?>function debug(logerror) { 
         if (typeof console != "undefined") { 
             console.log(logerror); 
         } 
@@ -97,11 +96,10 @@ function LoadAjaxPage(page,main) {
  }
 }
 
-//AJAX PAGE HASH HANDLER?
 var hash=document.location.hash.split("#");
 var hash=hash[1]; // means pagename
 if (typeof(hash) == "undefined") { var hash='home'; }
 
 if (typeof(runned) == "undefined") {
-  setTimeout("LoadAjaxPage('http://home.wdgss.nl/projecten/OSMS/"+hash+"','http://home.wdgss.nl/projecten/OSMS/');", 500)
+  setTimeout("LoadAjaxPage('h<?php echo $url; ?>/"+hash+"','<?php echo $url; ?>');", 500)
 }
