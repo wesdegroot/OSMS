@@ -49,32 +49,63 @@ function checkLength(e,l,i)
     if (e.length == 0)
     {
         document.getElementById(i).innerHTML = "<font color='red'>" + translate('may not be empty') + "</font>";
+        document.getElementById(i + ".status").innerHTML = "0";
     }
     else if (e.length < l)
     {
         document.getElementById(i).innerHTML = "<font color='red'>" + translate('To Short') + "</font>";
+        document.getElementById(i + ".status").innerHTML = "0";
     }
     else if (e.length < l+2 )
     {
         document.getElementById(i).innerHTML = "<font color='orange'>" + translate('Good') + "</font>";
+        document.getElementById(i + ".status").innerHTML = "1";
     }
     else
     {
         document.getElementById(i).innerHTML = "<font color='green'>" + translate('Perfect') + "</font>";   
+        document.getElementById(i + ".status").innerHTML = "1";
     }
+    document.getElementById(i + ".status").style.display = "none";
+    document.getElementById(i + ".status").style.visibility = "hidden";
+    checkAll();
 }
 
 function checkEmail(e,i)
 {
-    var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+    var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{1,4})$/;
 
     if (reg.test(e) == false) {
         document.getElementById(i).innerHTML = "<font color='red'>" + translate('Invalid') + "</font>";
+        document.getElementById(i + ".status").innerHTML = "0";
     }
     else
     {
         document.getElementById(i).innerHTML = "<font color='green'>" + translate('Valid') + "</font>";   
+        document.getElementById(i + ".status").innerHTML = "1";
     }
+    document.getElementById(i + ".status").style.display = "none";
+    document.getElementById(i + ".status").style.visibility = "hidden";
+    checkAll();
+}
+
+function checkAll()
+{
+    if ( document.getElementById('sqluser.status').innerHTML == 1 &&
+         document.getElementById('sqlpass.status').innerHTML == 1 &&
+         document.getElementById('sqlhost.status').innerHTML == 1 &&
+         document.getElementById('sqldb.status').innerHTML == 1 &&
+         document.getElementById('sqlprefix.status').innerHTML == 1 &&
+         document.getElementById('usrname.status').innerHTML == 1 &&
+         document.getElementById('usrpass.status').innerHTML == 1 &&
+         document.getElementById('usrmail.status').innerHTML == 1
+       ) {
+           alert('done :D');
+       }
+       else
+       {
+           //alert('ERROR MISSING SOME FIELDS');
+       }
 }
 </script>
 </head>
@@ -88,10 +119,18 @@ function checkEmail(e,i)
             Username
         </td>
         <td>
-            <input type='text' name='mysql.username'>
+            <input type='text' name='mysql.username' onfocus="checkLength(this.value,0,'sqluser')" onkeypress="checkLength(this.value,0,'sqluser')">
         </td>
         <td>
-            [TEST]
+            <span id='sqluser'>
+                <font color='red'>
+                    <script>
+                        document.write(translate('may not be empty'));
+                    </script>
+                </font>
+            </span>
+
+            <span id='sqluser.status'></span>
         </td>
     </tr>
     <tr>
@@ -99,10 +138,18 @@ function checkEmail(e,i)
             Password
         </td>
         <td>
-            <input type='text' name='mysql.password'>
+            <input type='text' name='mysql.password' onfocus="checkLength(this.value,0,'sqlpass')" onkeypress="checkLength(this.value,0,'sqlpass')">
         </td>
         <td>
-            [TEST]
+            <span id='sqlpass'>
+                <font color='red'>
+                    <script>
+                        document.write(translate('may not be empty'));
+                    </script>
+                </font>
+            </span>
+
+            <span id='sqlpass.status'></span>
         </td>
     </tr>
     <tr>
@@ -110,10 +157,18 @@ function checkEmail(e,i)
             Host
         </td>
         <td>
-            <input type='text' name='mysql.host'>
+            <input type='text' name='mysql.host' value="localhost" onfocus="checkLength(this.value,0,'sqlhost')" onkeypress="checkLength(this.value,0,'sqlhost')">
         </td>
         <td>
-            [TEST]
+            <span id='sqlhost'>
+                <font color='green'>
+                    <script>
+                        document.write(translate('good'));
+                    </script>
+                </font>
+            </span>
+
+            <span id='sqlhost.status'>1</span>
         </td>
     </tr>
     <tr>
@@ -121,10 +176,18 @@ function checkEmail(e,i)
             Database
         </td>
         <td>
-            <input type='text' name='mysql.database'>
+            <input type='text' name='mysql.database' onfocus="checkLength(this.value,0,'sqldb')" onkeypress="checkLength(this.value,0,'sqldb')">
         </td>
         <td>
-            [TEST]
+            <span id='sqldb'>
+                <font color='red'>
+                    <script>
+                        document.write(translate('May not be empty'));
+                    </script>
+                </font>
+            </span>
+
+            <span id='sqldb.status'></span>
         </td>
     </tr>
     <tr>
@@ -142,6 +205,8 @@ function checkEmail(e,i)
                     </script>
                 </font>
             </span>
+
+            <span id='sqlprefix.status'>1</span>
         </td>
     </tr>
     <tr>
@@ -166,6 +231,8 @@ function checkEmail(e,i)
                     </script>
                 </font>
             </span>
+
+            <span id='usrname.status'></span>
         </td>
     </tr>
     <tr>
@@ -183,6 +250,8 @@ function checkEmail(e,i)
                     </script>
                 </font>
             </span>
+
+            <span id='usrpass.status'></span>
         </td>
     </tr>
     <tr>
@@ -200,6 +269,8 @@ function checkEmail(e,i)
                     </script>
                 </font>
             </span>
+
+            <span id='usrmail.status'></span>
         </td>
     </tr>
     <tr>
