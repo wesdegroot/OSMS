@@ -1,9 +1,11 @@
 <?php
+session_start();
+
 if ( isset ( $_COOKIE['lang'] ) )
 {
-  if(file_exists("../languages/" . $_COOKIE['lang'] . ".php"))
+  if(file_exists("../languages/" . $_SESSION['lang'] . ".php"))
   {
-    include "../languages/" . $_COOKIE['lang'] . ".php";  
+    include "../languages/" . $_SESSION['lang'] . ".php";  
   }
   else
   {
