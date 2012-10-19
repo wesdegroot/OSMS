@@ -42,6 +42,7 @@ $language['invalid']                    = "Nep";
 $language['good']                       = "Goed";
 $language['perfect']                    = "Perfect";
 $language['valid']                      = "Geldig";
+$language['may not be empty']           = "Mag NIET leeg zijn";
 
 //menu
 $language['information']                = "Informatie";
