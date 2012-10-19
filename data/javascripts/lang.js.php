@@ -1,7 +1,14 @@
 <?php
-if ( isset ( $_SESSION['lang'] ) )
+if ( isset ( $_COOKIE['lang'] ) )
 {
-  include "../languages/" . $_SESSION['lang'] . ".php";  
+  if(file_exists("../languages/" . $_COOKIE['lang'] . ".php"))
+  {
+    include "../languages/" . $_COOKIE['lang'] . ".php";  
+  }
+  else
+  {
+    include "../languages/en.php";   
+  }
 }
 else
 {

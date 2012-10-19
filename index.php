@@ -30,6 +30,7 @@ if(isset($_GET['setLang']))
 {
 	global $conf;
 	$_SESSION['lang'] = $_GET['setLang'];
+	setcookie("lang", $_GET['setLang'], time()+(3600*24*365));  /* expire in 1 hour */
 	header("location: ".$conf['site']['url']);
 	exit;
 }
@@ -51,7 +52,7 @@ if(!isset($_SESSION['lang']))
 	{
 		$lang = $conf['system']['language'];
 	}
-
+	setcookie("lang", $lang, time()+(3600*24*365));  /* expire in 1 hour */
 	$_SESSION['lang'] = $lang;
 	header("location: ".$conf['site']['url']);
 	exit();
