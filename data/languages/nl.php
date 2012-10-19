@@ -44,6 +44,19 @@ $language['perfect']                    = "Perfect";
 $language['valid']                      = "Geldig";
 $language['may not be empty']           = "Mag NIET leeg zijn";
 $language['resetted']                   = "Ge-reset";
+$language['mysql']                      = "MySQL";
+$language['username']                   = "Gebruikersnaam";
+$language['password']                   = "Wachtwoord";
+$language['host']                       = "Host";
+$language['database']                   = "Database";
+$language['prefix']                     = "Voorvoegzel";
+$language['root']                       = "Hoofd";
+$language['user']                       = "Gebruiker";
+$language['email']                      = "Email";
+$language['file checks']                = "Bestands Checks";
+$language['module directory']           = "Module Map";
+$language['template directory']         = "Thema Map";
+$language['overall directory']          = "Alle Mappen";
 
 //menu
 $language['information']                = "Informatie";

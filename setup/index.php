@@ -316,7 +316,7 @@ function reset()
     </tr>
     <tr>
         <td>
-            <script>document.write(translate('Configuration directory
+            <script>document.write(translate('Configuration directory'));</script>
         </td>
         <td>
             ./data/
