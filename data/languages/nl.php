@@ -37,10 +37,10 @@ $language['server information']         = "Server Informatie";
 $language['translationversion']         = "Taalbestand Versie";
 
 //setup
-$lang['to short']                       = "Te kort";
-$lang['invalid']                        = "Nep";
-$lang['good']                           = "Goed";
-$lang['perfect']                        = "Perfect";
+$language['to short']                   = "Te kort";
+$language['invalid']                    = "Nep";
+$language['good']                       = "Goed";
+$language['perfect']                    = "Perfect";
 
 //menu
 $language['information']                = "Informatie";
