@@ -33,7 +33,6 @@ $url = $cfg->get("site","url");
 </script>
 
 <script type="text/javascript" src="data/javascripts/blink.js"></script>
-<script type="text/javascript" src="data/javascripts/framebreaker.js"></script>
 <script type="text/javascript" src="data/javascripts/showhide.js"></script>
 
     <script type="text/javascript" src="themes/default/jquery.js"></script>
@@ -82,7 +81,7 @@ $url = $cfg->get("site","url");
                                               <div class="art-vmenublockcontent-body">
                                                           <ul class="art-vmenu">
                                                             <?php
-echo menu("<li><a href=\"","\"><span class=\"l\"></span><span class=\"r\"></span><span class=\"t\">","</span></a></li>");
+                                                              echo menu("<li><a href=\"","\"><span class=\"l\"></span><span class=\"r\"></span><span class=\"t\">","</span></a></li>");
                                                             ?>
                                                           </ul>
                                           
@@ -135,7 +134,9 @@ echo menu("<li><a href=\"","\"><span class=\"l\"></span><span class=\"r\"></span
             </div>
         </div>
         <div class="cleared"></div>
-        <p class="art-page-footer">&copy; <a href='http://www.wdgp.nl' target='_blank'>WDG.P</a> &amp; <a href='http://www.webvel.nl' target='blank'>Webvel</a> 2012-<?php echo date("Y"); ?></p>
+        <p class="art-page-footer">&copy; <a href='http://www.wdgp.nl' target='_blank'>WDG.P</a> &amp; 
+                                          <a href='http://www.webvel.nl' target='blank'>Webvel</a>,&nbsp;
+                                          2012-<?php echo date("Y"); ?></p>
     </div>
     
 </body>
