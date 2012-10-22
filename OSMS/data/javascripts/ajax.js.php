@@ -62,14 +62,26 @@ function stateChanged(field,title) {
       window.location.hash=title;
       document.title = '<?php global $sfg; echo $cfg->getValue('site','name'); ?>: ' + translate(title);
 
-      if(typeof ajaxInit == 'function') { 
+      if(typeof(window.ajaxInit) == 'function') { 
+        console.log('Ajax Init Found!');
         ajaxInit(); 
       }
-
+      initAjax('main_cont','whut');
 
       }
   }
 }
+
+function initAjax(divId, innerHTML)  
+{  
+   var div = document.getElementById(divId);  
+   div.innerHTML = innerHTML;  
+   var x = div.getElementsByTagName("script");   
+   for(var i=0;i<x.length;i++)  
+   {  
+       eval(x[i].text);  
+   }  
+}  
 
 
 function LoadAPage(page,main) {
@@ -107,5 +119,5 @@ var hash=hash[1]; // means pagename
 if (typeof(hash) == "undefined") { var hash='home'; }
 
 if (typeof(runned) == "undefined") {
-  setTimeout("LoadAjaxPage('h<?php echo $url; ?>/"+hash+"','<?php echo $url; ?>');", 500)
+  setTimeout("LoadAjaxPage('<?php echo $url; ?>/"+hash+"','<?php echo $url; ?>');", 500)
 }
