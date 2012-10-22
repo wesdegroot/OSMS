@@ -1,5 +1,5 @@
 # OSMS
-"Use Feel, And Share"
+##"Use Feel, And Share"
 ### OpenSource Managament System
 
 #### Readme
@@ -19,4 +19,5 @@ The Licence is CC BY-SA:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 [Live Demo: Standalone](http://osms.wdgp.nl)
-[Live Demo: Wordpress](http://d.wdgp.nl)
+
+[Live Demo: Wordpress (buggy)](http://d.wdgp.nl/?page_id=4)
