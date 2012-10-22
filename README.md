@@ -1,5 +1,5 @@
-# OSMS
-##"Use Feel, And Share"
+## OSMS
+###"Use Feel, And Share"
 ### OpenSource Managament System
 
 #### Readme
