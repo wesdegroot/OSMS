@@ -61,6 +61,12 @@ function stateChanged(field,title) {
       document.getElementById('pagename').innerHTML=translate(title);
       window.location.hash=title;
       document.title = '<?php global $sfg; echo $cfg->getValue('site','name'); ?>: ' + translate(title);
+
+      if(typeof ajaxInit == 'function') { 
+        ajaxInit(); 
+      }
+
+
       }
   }
 }

@@ -29,7 +29,7 @@ Testing "translations"<br>
  <td>hello</td><td>[translate:"hello"]</td><td>inline</td><td><font color="green">Sucess!!!</font></td>
 </tr>
 <tr>
- <td>page</td><td><script type="text/javascript">document.write('test' + translate('page'));</script></td><td>JavaScript</td><td><font color='red'>Failed</font></td>
+ <td>page</td><td><script type="text/javascript">function ajaxInit() { document.write('test' + translate('page')); }</script></td><td>JavaScript</td><td><font color='red'>Failed</font></td>
 </tr>
 <tr>
  <td>loading</td><td><?php echo lang('loading'); ?></td><td>PHP</td><td><font color='green'>Sucess!!!</font></td>
