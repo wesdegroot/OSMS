@@ -1,5 +1,5 @@
 # OSMS
-
+"Use Feel, And Share"
 ### OpenSource Managament System
 
 #### Readme
@@ -11,15 +11,12 @@
 5. enyoy.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
 #### Licence	
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The Licence is CC BY-SA:
-
  That means you may use, edit, improve the code, as long you share it also;
  you MUST leave the names of 'WDG.P' And 'WebVel'
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-"Use Feel, And Share"
-
-[Live Demo: Standalone](osms.wdgp.nl), [Live Demo: Wordpress](d.wdgp.nl)
+[Live Demo: Standalone](http://osms.wdgp.nl)
+[Live Demo: Wordpress](http://d.wdgp.nl)
