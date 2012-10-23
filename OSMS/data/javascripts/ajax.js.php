@@ -56,31 +56,39 @@ function stateChanged(field,title) {
   if(request.readyState == 4) {
     if(request.status == 200) {
       detailDiv = document.getElementById(field);
-      debug("Page:" + request.responseText);
       detailDiv.innerHTML = request.responseText;
       document.getElementById('pagename').innerHTML=translate(title);
       window.location.hash=title;
       document.title = '<?php global $sfg; echo $cfg->getValue('site','name'); ?>: ' + translate(title);
-
-      if(typeof(window.ajaxInit) == 'function') { 
-        console.log('Ajax Init Found!');
-        ajaxInit(); 
-      }
-      initAjax('main_cont','whut');
-
+      //initAjax(request.responseText);
       }
   }
 }
 
-function initAjax(divId, innerHTML)  
-{  
-   var div = document.getElementById(divId);  
-   div.innerHTML = innerHTML;  
-   var x = div.getElementsByTagName("script");   
-   for(var i=0;i<x.length;i++)  
-   {  
-       eval(x[i].text);  
-   }  
+function initAjax(strcode)  
+{
+  var scripts = new Array();
+
+  while(strcode.indexOf("<script") > -1 || strcode.indexOf("</script") > -1) {
+    var s = strcode.indexOf("<script");
+    var s_e = strcode.indexOf(">", s);
+    var e = strcode.indexOf("</script", s);
+    var e_e = strcode.indexOf(">", e);
+    
+    scripts.push(strcode.substring(s_e+1, e));
+    strcode = strcode.substring(0, s) + strcode.substring(e_e+1);
+  }
+  
+  for(var i=0; i<scripts.length; i++) {
+    try {
+      eval(scripts[i]);
+    }
+    catch(ex) {
+      debug('failed to run JavaScript');
+      debug("JS: " + scripts[i] + "EX: " + ex);
+    }
+  }
+
 }  
 
 
