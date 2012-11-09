@@ -28,7 +28,7 @@
         // uninstall parameters
     }
 
-    function mod_maps_view()
+    function mod_mapsview_view()
     {
         global $conf;
         echo "<iframe src=\"" . $conf['site']['url'] . "?page=maps&ajaxload\" width=\"100\" height=\"100\"></iframe>";

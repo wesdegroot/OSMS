@@ -77,6 +77,8 @@ class superclass
 		elseif ( file_exists ('./modules/' . $page . '/module.php') )
 			{
 				//ob_start();
+				$lp=$page;
+
 				include './modules/' . $page . '/module.php';
 
 				if(function_exists("mod_" . $page . "_view")) //if cosum module has page, find&print.
@@ -90,6 +92,8 @@ class superclass
 				//ob_end_clean();
 
 				$page = preg_replace("#\[translate\:\"(.*?)\"\]#si", lang(strtolower("\\1")), $page);
+				if ( $page == $lp)
+					$page = "Module Error.";
 				return $page;
 			}
 		else
