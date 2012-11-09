@@ -80,14 +80,20 @@ class superclass
 				include './modules/' . $page . '/module.php';
 				$page = ob_get_contents();
 				ob_end_clean();
+
+				if(function_exists("module_" . $page . "_view"))
+				 { $page = call_user_func("module_".$page."_view"); }
+
 				$page = preg_replace("#\[translate\:\"(.*?)\"\]#si", lang(strtolower("\\1")), $page);
 				return $page;
 			}
 		else
 			{
-				return "<h1>Sorry, But the page \"{$page}\" does not exists!</h1>If this error comes to much send the following data to the developers<br>
-				Page: {$page}<br>
-				Site: {$_SERVER['HTTP_HOST']}";
+				return "<h1>Sorry, But the page \"{$page}\" does not exists!</h1>
+						If this error comes to much send the following data to the developers<br>
+						Page: {$page}<br>
+						Site: {$_SERVER['HTTP_HOST']}<br>
+						Err.: 0x00001";
 			}
 	}
 
