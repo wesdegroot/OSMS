@@ -127,7 +127,7 @@ $url = $cfg->get("site","url");
                     <div class="art-footer-r"></div>
                     <div class="art-footer-body">
                         <div class="art-footer-text">
-                            THIS IS A PRE BETA :)
+                            &copy; 0000-0000 XXXXXXX B.V., All Rights Reserved
                         </div>
                         <div class="cleared"></div>
                     </div>
@@ -136,9 +136,7 @@ $url = $cfg->get("site","url");
             </div>
         </div>
         <div class="cleared"></div>
-        <p class="art-page-footer">&copy; <a href='http://www.wdgp.nl' target='_blank'>WDG.P</a> &amp; 
-                                          <a href='http://www.webvel.nl' target='blank'>Webvel</a>,&nbsp;
-                                          2012-<?php echo date("Y"); ?></p>
+        <p class="art-page-footer">&copy; 2012-<?php echo date("Y"); ?>,&nbsp;<a href='http://www.wdgp.nl' target='_blank'><font color='black'>WDG.P</font></a>&nbsp;&amp;&nbsp;<a href='http://www.webvel.nl' target='blank'><font color='black'>Webvel</font></a>,&nbsp;All&nbsp;Rights&nbsp;Reserved</p>
     </div>
     
 </body>
