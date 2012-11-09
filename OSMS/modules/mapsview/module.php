@@ -31,7 +31,7 @@
     function mod_mapsview_view()
     {
         global $conf;
-        echo "<iframe src=\"" . $conf['site']['url'] . "?page=maps&ajaxload\" width=\"100\" height=\"100\"></iframe>";
+        echo "<iframe src=\"" . $conf['site']['url'] . "?page=maps&ajaxload\" width=\"500\" height=\"400\"></iframe>";
     }
 
 

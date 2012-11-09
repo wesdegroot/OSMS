@@ -67,6 +67,10 @@ $language['big page']                   = "Grote Pagina";
 $language['home']                       = "Begin";
 $language['info']                       = "Informatie";
 
+$language['maps']                       = "Kaarten";
+$language['mapsview']                   = "Kaarten";
+$language['map']                        = "Kaart";
+
 //javascript
 $language['loading']                    = "laden";
 $language['please wait']                = "een moment geduld aub";
