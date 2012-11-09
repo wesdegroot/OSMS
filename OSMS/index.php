@@ -35,54 +35,57 @@ if(isset($_GET['setLang']))
 	exit;
 }
 
-if(!isset($_SESSION['lang']))
-{
+if(!isset($_SESSION['lang'])) // do you have "selected" a language?
+{                             // NO...
 	global $conf;
-	if ($conf['system']['language'] == "auto")
+	if ($conf['system']['language'] == "auto") // if config is auto, plz, check tha thing
 	{
-		$lang = ($_SERVER['HTTP_ACCEPT_LANGUAGE']);  
+		$lang = ($_SERVER['HTTP_ACCEPT_LANGUAGE']); // read the language from the browser...
 
-		if(ereg("nl", $lang)) {  
-   			$lang = "nl";
+		if(ereg("nl", $lang)) {   /// if NL then...
+   			$lang = "nl"; //lang=nl
 		} else {  
-    		$lang = "en";
+    		$lang = "en"; //lang=en
 		} 
 	}
 	else
 	{
-		$lang = $conf['system']['language'];
+		$lang = $conf['system']['language']; //else forced language.
 	}
+
 	setcookie("lang", $lang, time()+(3600*24*365));  /* expire in 1 hour */
-	$_SESSION['lang'] = $lang;
-	header("location: ".$conf['site']['url']);
-	exit();
+	$_SESSION['lang'] = $lang;                       // this session only..
+	header("location: ".$conf['site']['url']);       // Force Reload.......
+	exit();                                          // Then kill Request..
 }
 
-$site = new superclass();
+$site = new superclass(); //  "Tha Supah" class.
 
 if ( !isset($_GET['page']) )
-	$_GET['page'] = "home";
+	$_GET['page'] = "home"; // if no page requested, i will request the "home"-page for you.
 	
-if ( !isset($_GET['ajaxload']) )
+if ( !isset($_GET['ajaxload']) ) // are you ajax, or not?
 	{
-		if (!$site->isMobile()) 
+		if (!$site->isMobile()) //check if the site is entered from a mobile device.
 		{
 			$site->loadStyle(
-								$site->getConfig('template'),
-								null /*$site->loadPage($_GET['page'])*/ //NEEDS TO GET AJAX CALLS!!!
+								$site->getConfig('template'), //load the default template
+								null //load nothing, ajax will do that for you.
 						    );
 		}
 		else
 		{
 			$site->loadStyle(
-								"mobile",
-								$site->loadPage($_GET['page']) //NEEDS TO GET AJAX CALLS!!!
+								"mobile", //mobile theme :)
+								$site->loadPage($_GET['page']) //needs, no?, or, w/e it has ajax,
 							);
-		} ///temporary fix... frustrated... :@
-		$site->finish( (!isset($_GET['ajaxload']))?true:false );
+		} 
+		$site->finish( (!isset($_GET['ajaxload']))?true:false ); // check if my page is requested from ajax,
+															     // if true, then the "style" will be ignored.
 	}
 else
 	{
 		echo $site->loadPage($_GET['page']); //AJAX CALL!!!
+											 // NO STYLE!!!
 	}
 ?>
