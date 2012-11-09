@@ -78,11 +78,14 @@ class superclass
 			{
 				//ob_start();
 				include './modules/' . $page . '/module.php';
-				//$page = ob_get_contents();
 
-				if(function_exists("mod_" . $page . "_view"))
-				 { $page = call_user_func("mod_{$page}_view"); }
-				 else { $page = "WTF"; }
+				if(function_exists("mod_" . $page . "_view")) //if cosum module has page, find&print.
+				 {
+					 $page = call_user_func("mod_{$page}_view");
+				 }
+				 //else { $page = "WTF"; } //debug :P
+
+				//$page = ob_get_contents();
 
 				//ob_end_clean();
 

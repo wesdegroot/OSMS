@@ -26,6 +26,8 @@ $url = $cfg->get("site","url");
     <link rel="stylesheet" href="themes/default/style.css" type="text/css" media="screen" />
     <!--[if IE 6]><link rel="stylesheet" href="style.ie6.css" type="text/css" media="screen" /><![endif]-->
     <!--[if IE 7]><link rel="stylesheet" href="style.ie7.css" type="text/css" media="screen" /><![endif]-->
+<script type="text/javascript" src="data/javascripts/maps.js"></script>
+
 <script type="text/javascript" src="data/javascripts/lang.js">
 </script>
 <script type="text/javascript" src="data/javascripts/ajax.js">

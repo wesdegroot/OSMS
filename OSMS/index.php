@@ -82,9 +82,11 @@ if ( !isset($_GET['ajaxload']) ) // are you ajax, or not?
 		} 
 		$site->finish( (!isset($_GET['ajaxload']))?true:false ); // check if my page is requested from ajax,
 															     // if true, then the "style" will be ignored.
+		define('ajax', (!isset($_GET['ajaxload']))?true:false );
 	}
 else
 	{
+		define('ajax', true);
 		echo $site->loadPage($_GET['page']); //AJAX CALL!!!
 											 // NO STYLE!!!
 	}
