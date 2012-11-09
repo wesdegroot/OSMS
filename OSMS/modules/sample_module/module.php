@@ -13,6 +13,8 @@
  # => Rules: 
  # => http://wdgp.nl/#conditions
  
+ if(!defined('lomo1'))
+ {
 	$module[] = array(
 						'sample',
 						'sample module',
@@ -39,5 +41,6 @@
 	}
 
 	echo mod_sample_view();
-
+define('lomo1', true);
+}
 ?>

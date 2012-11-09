@@ -53,18 +53,3 @@ for($i=0; $i<sizeof($gen); $i++)
             });\r\n";
 }
 ?>
-function toggle_logo() {
-var source = document.getElementById('map');
-
-//Terms of use link
-var divs = source.getElementsByTagName('div');
-var current = (divs[14].style.display == 'none') ? 'block' : 'none';
-divs[14].style.display = current;
-
-//Google Logo link
-var links = source.getElementsByTagName('a');
-var current = (links[1].style.display == 'none') ? 'block' : 'none';
-links[1].style.display = current;
-}
-
-toggle_logo();

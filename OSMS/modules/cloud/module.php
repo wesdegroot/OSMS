@@ -19,24 +19,35 @@ $module[] = array(
 					array(null, null) //hidden only system callable functions
 				 );
 
+if ( !function_exists('cloud_save_config') )
+{
 function cloud_save_config ( $configuration = null )
 {
 	//SAVE TO CLOUD
 	return false;
 }
+}
 
+if ( !function_exists('cloud_get_config') )
+{
 function cloud_get_config ( $file = 'configuration.ini', $parameter = null )
 {
 	//GET FROM CLOUD
 	return false;
 }
+}
 
+if (!function_exists('cloud_get_config_parameter'))
+{
 function cloud_get_config_parameter ( $parameter )
 {
 	$cfg = new iniParser("./data/config/cloud.ini");
 	return $cfg->get('cloud',$parameter);
 }
+}
 
+if (!function_exists('cloud_login'))
+{
 function cloud_login ( $user, $pass )
 {
 	// if login is OK Then
@@ -50,12 +61,18 @@ function cloud_login ( $user, $pass )
 	$cfg->setValue('cloud','enabled', '1');
 	$cfg->save();
 }
+}
 
+if (!function_exists('cloud_register'))
+{
 function cloud_register ( $user, $pass, $email )
 {
 	return false;
 }
+}
 
+if (!function_exists('cloud_enabled'))
+{
 function cloud_enabled ()
 {
 	global $config;
@@ -68,5 +85,6 @@ function cloud_enabled ()
 	{
 		return false;
 	}
+}
 }
 ?>

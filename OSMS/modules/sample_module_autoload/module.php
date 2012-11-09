@@ -13,32 +13,32 @@
  # => Rules: 
  # => http://wdgp.nl/#conditions
  
-if ( !defined ( 'MOD_LOADED_SAMPLE') ) 
+if ( !defined ( 'MOD_LOADED_sample_autoload') ) 
 {
 	$module[] = array(
-						'sample',
-						'sample module',
-						array('mod_sample_func', 'mod_sample_view') //For Help!
+						'sample_autoload',
+						'sample_autoload module',
+						array('mod_sample_autoload_func', 'mod_sample_autoload_view') //For Help!
 					 );
 
-	function mod_sample_module_install () {
+	function mod_sample_autoload_module_autoload_install () {
 		// run here "install" commands (e.g. sql, writeconfig)
-		 $cfg->value("./data/config/configuration.ini", "autoload", "sample_module_autoload", "true"); //SET AUTO LOAD!!!
+		 $cfg->value("./data/config/configuration.ini", "autoload", "sample_autoload_module_autoload_autoload", "true"); //SET AUTO LOAD!!!
 	}
 
-	function mod_sample_func ( $parameters = null )
+	function mod_sample_autoload_func ( $parameters = null )
 	{
 		return "implent some functions !!!";
 	}
 
-	function mod_sample_view ()
+	function mod_sample_autoload_view ()
 	{
-		return "this comes on the website..." . mod_sample_func();
+		return "this comes on the website..." . mod_sample_autoload_func();
 	}
 
-	define('MOD_LOADED_SAMPLE', true);
+	define('MOD_LOADED_sample_autoload', true);
 }
 else {
-	echo mod_sample_view();
+	echo mod_sample_autoload_view();
 }
 ?>

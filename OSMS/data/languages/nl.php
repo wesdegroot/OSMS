@@ -71,6 +71,8 @@ $language['maps']                       = "Kaarten";
 $language['mapsview']                   = "Kaarten";
 $language['map']                        = "Kaart";
 
+$language['modlist']                    = "Module Lijst.";
+
 //javascript
 $language['loading']                    = "laden";
 $language['please wait']                = "een moment geduld aub";
@@ -82,6 +84,8 @@ $language['language']                   = 'Taal';
 $language['translator']                 = 'Vertaler';
 $language['welcome']                    = 'Welkom';
 $language['save']		                = 'opslaan';
+
+$language['loadtime']                   = "Laadtijd Test";
 
 // for later
 $language['...']		                = '...';
