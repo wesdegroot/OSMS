@@ -33,61 +33,16 @@
         return "implent some functions !!!";
     }
 
-    function mod_maps_view ($lat, $long, $width, $height)
+    function mod_maps_view()
     {
-echo <<<QuickAndDirty
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <title>Simple SlippyMap using Google Maps v3 API</title>
-        <style>
-            /* Style inspired by http://osm.lonvia.de/world_hiking.html */
-            html, body, .slippymap {
-                height: 100%;
-                width: 100%;
-                margin: 0;
-                padding: 0;
-            }
-            .slippymap {
-                width: 99.5%;
-                height: 99.5%;
-                outline: 1px solid gray;
-            }
-            header, footer{
-                position: fixed;
-                left: 0;
-                right: 0;
-                width: 100%
-                margin: 0;
-                padding: 0.21em;
-                z-index: 2;
-                background: #eed;
-            }
-            h1 {
-                font-size: 1.5em;
-                font-weight: bold;
-                margin: 0;
-            }
-            header {
-                border-bottom: 2px solid #531;
-                top: 0;
-            }
-            footer {
-                border-top: 2px solid #531;
-                bottom: 0;
-            }
-        </style> 
-    </head>
-    <body>
-        <header>
-            <h1>Slippy OpenStreetMap Map</h1>
-        </header>
-        <div id="map" class="slippymap" style="float: left;"></div>
-        <footer>
-            <p>Mapdata © <a href="http://www.openstreetmap.org/">OpenStreetMap</a> contributors
-            (<a href="http://www.openstreetmap.org/copyright">license</a>).</p>
-        </footer>
+        echo mod_maps_view_view(0,0,0,0);
+    }
+
+    function mod_maps_view_view ($lat, $long, $width, $height)
+    {
+return <<<QuickAndDirty
+        <div id="map" style="float: left;">
+
         <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
         <script type="text/javascript">
             var element = document.getElementById("map");
@@ -110,10 +65,10 @@ echo <<<QuickAndDirty
                 maxZoom: 18
             }));
         </script>
-    </body>
-</html>
 QuickAndDirty;
 
     }
+
+//mod_maps_view();
 
 ?>

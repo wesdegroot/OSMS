@@ -76,13 +76,14 @@ class superclass
 			}
 		elseif ( file_exists ('./modules/' . $page . '/module.php') )
 			{
-				ob_start();
+				//ob_start();
 				include './modules/' . $page . '/module.php';
-				$page = ob_get_contents();
-				ob_end_clean();
+				//$page = ob_get_contents();
 
 				if(function_exists("module_" . $page . "_view"))
-				 { $page = call_user_func("module_".$page."_view"); }
+				 { $page = call_user_func("module_{$page}_view"); }
+
+				//ob_end_clean();
 
 				$page = preg_replace("#\[translate\:\"(.*?)\"\]#si", lang(strtolower("\\1")), $page);
 				return $page;
