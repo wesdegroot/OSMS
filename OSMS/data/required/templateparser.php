@@ -80,8 +80,9 @@ class superclass
 				include './modules/' . $page . '/module.php';
 				//$page = ob_get_contents();
 
-				if(function_exists("module_" . $page . "_view"))
-				 { $page = call_user_func("module_{$page}_view"); }
+				if(function_exists("mod_" . $page . "_view"))
+				 { $page = call_user_func("mod_{$page}_view"); }
+				 else { $page = "WTF"; }
 
 				//ob_end_clean();
 
