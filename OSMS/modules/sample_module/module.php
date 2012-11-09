@@ -24,6 +24,10 @@
 		 $cfg->value("./data/config/configuration.ini", "autoload", "sample_module", "false"); //SET AUTO LOAD!!!
 	}
 
+	function mod_sample_module_uninstall () {
+		// uninstall parameters
+	}
+
 	function mod_sample_func ( $parameters = null )
 	{
 		return "implent some functions !!!";
