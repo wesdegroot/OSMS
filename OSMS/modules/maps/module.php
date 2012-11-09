@@ -41,7 +41,7 @@
     function mod_maps_view_view ($lat, $long, $width, $height)
     {
 return <<<QuickAndDirty
-        <div id="map" style="float: left;">
+        <div id="map" style="float: left;"></div>
 
         <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
         <script type="text/javascript">
