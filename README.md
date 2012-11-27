@@ -20,4 +20,4 @@ The Licence is CC BY-SA:
 
 [Live Demo: Standalone](http://osms.wdgp.nl)
 
-[Live Demo: Wordpress (buggy)](http://d.wdgp.nl/?page_id=4)
+[Live Demo: Wordpress (buggy)](http://d.wdgp.nl/?page_id=4) [OFFLINE]
