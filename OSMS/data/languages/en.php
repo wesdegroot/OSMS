@@ -56,7 +56,7 @@ $language['email']                      = "Email";
 $language['file checks']                = "File Checks";
 $language['module directory']           = "Module Directory";
 $language['template directory']         = "Theme Directory";
-$language['overall directory']          = "All Directory's";
+$language['overall directory']          = "All Directory\\'s";
 
 //menu
 $language['information']                = "Information";
