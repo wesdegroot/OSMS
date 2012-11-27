@@ -60,19 +60,20 @@
     
     function mod_orders_view ()
     {
-        if ( isset ( $_GET['mac'] ) )
-        {
+        if ( !isset ( $_GET['mac'] ) )
+            $_GET['mac']=nul;
+            
             switch ( $_GET['mac'] )
             {
                 case 'test':
-                    return "test.";
+                    echo "test.";
                 break;
 
                 default:
-                    return mod_orders_homepage();
+                    echo mod_orders_homepage();
                 break;
             }
-        }
+        
         //return "this comes on the website..." . mod_orders_func();
     }
 
