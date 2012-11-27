@@ -60,19 +60,20 @@
     
     function mod_invoices_view ()
     {
-        if ( isset ( $_GET['mac'] ) )
-        {
+        if ( !isset ( $_GET['mac'] ) )
+            $_GET['mac']=null;
+
             switch ( $_GET['mac'] )
             {
                 case 'test':
-                    return "test.";
+                    echo "test.";
                 break;
 
                 default:
-                    return mod_invoices_homepage();
+                    echo mod_invoices_homepage();
                 break;
             }
-        }
+        
         //return "this comes on the website..." . mod_invoices_func();
     }
 
