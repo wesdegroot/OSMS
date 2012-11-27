@@ -35,8 +35,7 @@
 
     function mod_weekreport_view ()
     {
-        return "this comes on the website..." . mod_weekreport_func();
+        echo "this comes on the website..." . mod_weekreport_func();
     }
 
-    echo mod_weekreport_view();
 ?>
