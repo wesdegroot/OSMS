@@ -13,6 +13,7 @@
  # => Rules: 
  # => http://wdgp.nl/#conditions
 
+//Replace Location Like Now
 header("location: ./OSMS/");
 
 ?>
