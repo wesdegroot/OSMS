@@ -23,14 +23,14 @@ if ( !defined ( 'MOD_LOADED_UPDATE') )
 
 	function update_url   () 
 	{
-		return "http://a.wdgp.nl/product/OSMS/{version}";
+		return "http://a.wdgp.nl/update/OSMS/%s";
 	}
 
 	function update_check ()
 	{
 		global $cfg;
 		return false; //No Updates ;)
-		if ( preg_match("/UPD/", $cont=@file_get_contents ( update_url() ) ) )
+		if ( preg_match("/UPD/", $cont=@file_get_contents ( sprintf(update_url(), getVersion() ) ) ) )
 		{
 			echo "Updates Avaible";
 			$cfg->value("./data/configuration/configuration.ini", "update", "updates", "YES");
@@ -50,7 +50,7 @@ if ( !defined ( 'MOD_LOADED_UPDATE') )
 		$upd_ver=fgc(update_url()."/version");
 		$cfg->value("./data/configuration/configuration.ini", "update", "update_version", $upd_ver);
 
-		$update = unserialize(file_get_contents(update_url() . '/update'));
+		$update = unserialize(file_get_contents( sprintf(update_url(), getVersion() ) . '/update'));
 		if ( is_writeable ( $update['file'] ) )
 			{
 				// update
