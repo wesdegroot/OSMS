@@ -1,20 +1,21 @@
 <?php
 session_start();
 
+//check if cookie language is setted already
 if ( isset ( $_COOKIE['lang'] ) )
 {
-  if(file_exists("../languages/" . $_SESSION['lang'] . ".php"))
+  if(file_exists("../languages/" . $_SESSION['lang'] . ".php")) //does the language exists?
   {
-    include "../languages/" . $_SESSION['lang'] . ".php";  
+    include "../languages/" . $_SESSION['lang'] . ".php";  //if yes then load
   }
   else
   {
-    include "../languages/en.php";   
+    include "../languages/en.php"; //otherwise english
   }
 }
 else
 {
-  include "../languages/en.php";
+  include "../languages/en.php"; //no cookie?, then english!
 }
 ?>function translate(id) {<?php
     $wo="var myOrginal=new Array(";

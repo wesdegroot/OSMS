@@ -1,0 +1,9 @@
+<?php
+# DevNull
+
+function dev_null ( $paste )
+{
+    //Lose In Space.
+    return null;
+}
+?>
