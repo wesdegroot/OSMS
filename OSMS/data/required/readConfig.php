@@ -12,6 +12,7 @@
  #
  # => Rules: 
  # => http://wdgp.nl/#conditions
+
 $cfg              = new iniParser("./data/config/system.sys");
 $system           = $cfg->get("system");
 
@@ -25,4 +26,9 @@ $conf['cloud']    = $cfg->get("cloud");
 $conf['modules']  = $cfg->get("autoload");
 $conf['menu']     = $cfg->get("menu");
 
+function getVersion()
+{
+    global $system;
+    return $system['version'];
+}
 ?>
