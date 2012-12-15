@@ -21,3 +21,12 @@ The Licence is CC BY-SA:
 [Live Demo: Standalone](http://osms.wdgp.nl)
 
 [Live Demo: Wordpress (buggy)](http://d.wdgp.nl/?page_id=4) [OFFLINE]
+
+#### Last Update
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Last
+ Update: 15 - 12 - 12
+
+Last
+ Commit: 15 - 12 - 12
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
