@@ -1,5 +1,6 @@
 ## OSMS
 ###"Use Feel, And Share"
+###"Manage All You Want To Manage!"
 ### OpenSource Managament System
 
 #### Readme
