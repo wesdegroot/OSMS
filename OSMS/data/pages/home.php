@@ -18,8 +18,6 @@ THIS IS THE HOME PAGE
 <BR><BR>
 <a href='#' onclick="LoadAjaxPage('http://home.wdgss.nl/projecten/OSMS/ajax','http://home.wdgss.nl/projecten/OSMS/');">TEST AJAX</a>
 <BR>
-si,sa,so,re,ma,fo,so......, YO
-
 Testing "translations"<br>
 <table>
 <tr>
@@ -27,10 +25,6 @@ Testing "translations"<br>
 </tr>
 <tr>
  <td>hello</td><td>[translate:"hello"]</td><td>inline</td><td><font color="green">Sucess!!!</font></td>
-</tr>
-<tr>
- <td>page</td><td>
-</td><td>JavaScript</td><td><font color='red'>Failed</font></td>
 </tr>
 <tr>
  <td>loading</td><td><?php echo lang('loading'); ?></td><td>PHP</td><td><font color='green'>Sucess!!!</font></td>
