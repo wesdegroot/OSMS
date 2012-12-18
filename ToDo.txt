@@ -1,2 +1,16 @@
 Todo list.
 
+- project ovezicht
+ = -company-
+ = bedrijf
+ = medewerker
+
+- Schuiven planning.
+
+={
+    check op voor-achternaam (zeker toevoegen)
+
+}
+
+
+Denken over startscherm.
