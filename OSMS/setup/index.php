@@ -12,11 +12,14 @@
  #
  # => Rules: 
  # => http://wdgp.nl/#conditions
-if ( $_SERVER['REQUEST_URI'] == "/projecten/OSMS/setup/")
-           header("location: http://osms.wdgp.nl/setup/");
+//if ( $_SERVER['REQUEST_URI'] == "/projecten/OSMS/setup/")
+//           header("location: http://osms.wdgp.nl/setup/");
  
- include 'layout.php';
- echo header();
+//include 'layout.php';
+
+//_header();
+
+//echo "XXXX";
 
 function is__writable($path)
 {
@@ -39,6 +42,15 @@ $yes = "<font color='green'><script>document.write(translate('yes'));</script></
 $no  = "<font color='red'><script>document.write(translate('no'));</script></font>";
 
 ?>
+<script language="Javascript">
+//<!-- 
+if (top.location == self.location)
+{
+    top.location = 'http://osms.wdgp.nl/#setup';
+}
+//--> 
+</script>
+
 <script type="text/javascript" src="../data/javascripts/lang.js">
 </script>
 <script type="text/javascript">
@@ -138,8 +150,6 @@ function reset()
     document.getElementById('subbutton').disabled         = true;
 }
 </script>
-</head>
-<body>
 
 <table>
     <tr>
@@ -368,5 +378,5 @@ function reset()
     </tr>
 </table>
 <?php
-    echo footer();
+// footer();
 ?>
