@@ -65,6 +65,7 @@ class superclass
 	public function loadPage($page)
 	{
 		global $config, $cfg;
+//		if ( $page == "setup" && file_exists("./setup/index."))
 		if ( file_exists ('./data/pages/' . $page . '.php') )
 			{
 				ob_start();

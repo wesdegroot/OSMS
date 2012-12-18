@@ -15,6 +15,9 @@
 if ( $_SERVER['REQUEST_URI'] == "/projecten/OSMS/setup/")
            header("location: http://osms.wdgp.nl/setup/");
  
+ include 'layout.php';
+ echo header();
+
 function is__writable($path)
 {
     if ($path{strlen($path)-1}=='/')       
@@ -364,3 +367,6 @@ function reset()
         <td><input id='subbutton' type='submit' value='save' disabled='true'></td>
     </tr>
 </table>
+<?php
+    echo footer();
+?>
