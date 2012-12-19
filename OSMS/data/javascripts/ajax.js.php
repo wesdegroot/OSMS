@@ -1,18 +1,58 @@
-// AJAX.JS
-// This Code is (c) WDG.P ; Free To use if opensource; non comerical;
-// and useable by WDG.P => and all the projects of it.
-// WDG.P => http://www.wdgp.nl - WesDeGroot Projects (http://www.wesdegrootprojects.nl)
-// WDG.P is the new name of WesDeGroot Projects.
-////////////////
-// - A.R.R. - //
-// - C.I.P. _ //
-////////////////
 <?php
 @session_start();
 include "../required/iniFunctions.php";
 $cfg = new iniParser("../config/configuration.ini");
 $url = $cfg->get("site","url");
-?>function debug(logerror) { 
+?>/*
+              ```      `::`                        
+          `.:.///:`   /::.                        
+         `/:`......  `.`        ``.`             
+         ./-.-.....-           `......`           
+         `/......`.`           .......`           
+           .::....              `....`            
+                          ///.......`              
+                         ..:.......:+`            
+        ```              `/.......`/.             
+      .:.....`            /..   `/`s`             
+     .:........           /-.   `/`s`             
+     ::........           :..   `-`s.             
+     `........           -+``    ::/o`            
+        ````            .s`       :/++            
+                       .s`         :-/o`          
+                      `o-  `..:::....`:o          
+                      .o.osyhhhhhhhhyo//o`       
+                     /oshhhhhhhhhyyhhdds:o`      
+                    :oyhysssssooooooosyhy:+`     
+                   .++hyssoooooooooooosyhs..      
+                  .:.yhyysssooooooooosyyhy...     
+                  `/:.:+syyhhhhhhhhhhhyyo//+..`   
+                    `.:://+oooosssssso+/++:..``   
+                         `....:::....`````        
+
+                        WesDeGroot Projects
+                               By
+                          Wesley De Groot
+
+
+                (c) 2001-2012, WesDeGroot Projects
+             
+                  http://www.wdgp.nl/#conditions
+                      ^ Terms & Conditions ^
+                         Please Read Them.
+
+*/
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+// AJAX.JS                                                                                 //
+// This Code is (c) WDG.P ; Free To use if opensource; non comerical;                      //
+// and useable by WDG.P => and all the projects of it.                                     //
+// WDG.P => http://www.wdgp.nl - WesDeGroot Projects (http://www.wesdegrootprojects.nl)    //
+// WDG.P is the new name of WesDeGroot Projects.                                           //
+/////////////////////////////////////////////////////////////////////////////////////////////
+// - © WDG.P 2001-2012                                              All Rights Reserved. - //
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+function debug(logerror) { 
         if (typeof console != "undefined") { 
             console.log(logerror); 
         } 
@@ -64,6 +104,15 @@ function stateChanged(field,title) {
       }
   }
 }
+function executeScript(str)
+{
+    var h = document.getElementsByTagName('head');      
+    var tempDiv = document.createElement("div");
+    tempDiv.innerHTML = unescape(str);  
+    var domScript = tempDiv.firstChild;    
+    h[0].appendChild(domScript);
+}
+  executeScript(escape('<script src="a.js"><\/script>'));
 
 function initAjax(strcode)  
 {

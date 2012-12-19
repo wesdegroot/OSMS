@@ -1,4 +1,11 @@
+[::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::]
 Todo list.
+ + build basic planning.
+
+Meeting
+[::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::]
+
+.
 
 - project ovezicht
  = -company-
@@ -12,7 +19,5 @@ Todo list.
 
 }
 
-
 Denken over startscherm.
- [in database inbouwen keuze startscherm]
- 
+- [in database inbouwen keuze startscherm]
