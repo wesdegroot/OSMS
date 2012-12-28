@@ -14,6 +14,10 @@
  # => http://wdgp.nl/#conditions
 
 //Replace Location Like Now
+//96665+655
+
+/* njuuni */
+
 header("location: ./OSMS/");
 
 ?>
