@@ -1,27 +1,18 @@
 ## OSMS
-###"Use Feel, And Share"
-###"Manage All You Want To Manage!"
-### OpenSource Managament System
+## OpenSource Managament System
+Terrible old code, only for archiving, feel free to use if you want
 
-#### Readme
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-1. First step: Read This
-2. Upload the "Setupfile" to your server and run setup.
-3. Read And UNDERSTAND the LICENCE.
-4. i must really make this "README" done...
-5. enyoy.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#### Licence	
+Licence	
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The Licence is CC BY-SA:
  That means you may use, edit, improve the code, as long you share it also;
  you MUST leave the names of 'WDG.P' And 'WebVel'
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-[Live Demo: Standalone](http://osms.wdgp.nl)
+[(offline) Live Demo: Standalone](http://osms.wdgp.nl)
 
-[Live Demo: Wordpress (buggy)](http://d.wdgp.nl/?page_id=4) [OFFLINE]
+[(offline) Live Demo: Wordpress (buggy)](http://d.wdgp.nl/?page_id=4) [OFFLINE]
 
 #### Last Update
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
